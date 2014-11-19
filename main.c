@@ -25,6 +25,14 @@
  *
  * A string with a counter is printed in serial every second.
  *
+ * Instead of checking continuously the function USBH_Process(&USB_OTG_Core, &USB_Host),
+ * I modified the usbh_core.c to call my own callbacks when a device is connected and disconnected.
+ * I defined these callbacks in usbh_msc_usr.h as extern functions. The user can declare
+ * these functions in their code to do something.
+ *
+ * Check BSP file for pinout used and check the timer config if you use other board
+ * than Nucleo F401.
+ *
  * Miguel Moreto
  * Florianopolis - Brazil - 2014
  */
@@ -38,14 +46,22 @@
 #include "usbd_usr.h"
 #include "usbd_desc.h"
 #include "usb_conf.h"
+#include "usbh_core.h"
+//#include "usbh_usr.h"
+#include "usbh_msc_core.h"
+#include "usbh_msc_usr.h"
+
 
 #include <stdio.h>
 #include <string.h>
 
-#define USE_FATFS
+//#define USE_FATFS
 //#define USE_USB_DEVICE
+#define USE_USB_HOST
 
-__ALIGN_BEGIN USB_OTG_CORE_HANDLE     USB_OTG_dev  __ALIGN_END ;
+//__ALIGN_BEGIN USB_OTG_CORE_HANDLE     USB_OTG_dev  __ALIGN_END ;
+__ALIGN_BEGIN USB_OTG_CORE_HANDLE    USB_OTG_Core __ALIGN_END;
+__ALIGN_BEGIN USBH_HOST               USB_Host __ALIGN_END;
 
 #ifdef __GNUC__
   /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
@@ -57,6 +73,9 @@ __ALIGN_BEGIN USB_OTG_CORE_HANDLE     USB_OTG_dev  __ALIGN_END ;
 
 /* Flag that is set in interrupt handler. Avoid doing slow stuff in interrupt handlers. */
 volatile uint16_t one_second_flag = 0;
+volatile uint8_t usb_host_connected_flag = 0;
+volatile uint8_t usb_host_disconnected_flag = 0;
+
 
 TM_RTC_Time_t datatime;
 
@@ -102,7 +121,7 @@ int main()
 	TM_RTC_Interrupts(TM_RTC_Int_1s);
 
 #ifdef USE_USB_DEVICE
-	  USBD_Init(&USB_OTG_dev,
+	  USBD_Init(&USB_OTG_Core,
 	#ifdef USE_USB_OTG_HS
 	            USB_OTG_HS_CORE_ID,
 	#else
@@ -114,6 +133,12 @@ int main()
 
 	  GPIO_SetBits(LED1_PORT, LED1);
 	  while(1){}
+#endif
+
+#ifdef USE_USB_HOST
+	printf("\n\r> Initializing USB Host Full speed...");
+	USBH_Init(&USB_OTG_Core,USB_OTG_FS_CORE_ID,&USB_Host,&USBH_MSC_cb,&USR_USBH_MSC_cb);
+	printf("\n\r> USB Host Full speed initialized.");
 #endif
 
     GPIO_SetBits(LED1_PORT, LED1);
@@ -156,13 +181,32 @@ int main()
     /* Main loop */
     while(1){
 
+    	if (usb_host_connected_flag){
+    		printf("\r\n A USB device was connected. **");
+    		if (HCD_IsDeviceConnected(&USB_OTG_Core)){
+    			while(!USBH_USR_MSC_IsReady()){
+    				/* Enumerate and configure connected device.. */
+    				USBH_Process(&USB_OTG_Core, &USB_Host);
+    			}
+    		}
+    		usb_host_connected_flag = 0; // Reset the flag.
+    	} // usb_host_flag
+
+    	if (usb_host_disconnected_flag){
+    		printf("\r\n A USB device was disconnected. **");
+    		/* Re-Initilaize Host for new Enumeration */
+    		USBH_DeInit(&USB_OTG_Core, &USB_Host);
+    		USB_Host.usr_cb->DeInit();
+    		USB_Host.class_cb->DeInit(&USB_OTG_Core, &USB_Host.device_prop);
+    		usb_host_disconnected_flag = 0;
+    	}
+
     	if (one_second_flag){
     		/* Toogle LED */
     		GPIO_ToggleBits(LED1_PORT,LED1);
     		/* Get time */
     		TM_RTC_GetDateTime(&datatime, TM_RTC_Format_BIN);
-
-    		/* Write to USART connected with STLINK (USART2) */
+    		/* Write date and time to USART connected with STLINK (USART2) */
     		printf("\r\n%02d.%02d.%04d %02d:%02d:%02d",
     					datatime.date,
     					datatime.month,
@@ -170,9 +214,6 @@ int main()
     					datatime.hours,
     					datatime.minutes,
     					datatime.seconds);
-
-    		//printf("\r\nTime elapsed is %d seconds.",counter);
-    		//counter++;
     		/* Reset flag */
     		one_second_flag = 0;
     	} // end one_second_flag
@@ -180,6 +221,19 @@ int main()
 
 } // end main
 
+/* When a USB device is connected to the usb host this callback is executed.
+ * It is asynchronous and they are called from USB interrupt. So keep it short and
+ * do all your stuff in main code. */
+void USBH_ConnectEventCallback(void){
+	usb_host_connected_flag = 1;
+}
+
+/* When a USB device is disconnected to the usb host this callback is executed.
+ * It is asynchronous and they are called from USB interrupt. So keep it short and
+ * do all your stuff in main code. */
+void USBH_DisconnectEventCallback(void){
+	usb_host_disconnected_flag = 1;
+}
 
 /* Custom request handler function */
 /* Called on wakeup interrupt */

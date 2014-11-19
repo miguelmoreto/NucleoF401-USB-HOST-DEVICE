@@ -28,6 +28,9 @@
 #include "usb_core.h"
 #include "usbd_core.h"
 #include "usb_conf.h"
+#include "usb_hcd_int.h"
+#include "usb_dcd_int.h"
+#include "usbh_core.h"
 
 /** @addtogroup STM32F4xx_StdPeriph_Examples
   * @{
@@ -40,8 +43,12 @@ extern volatile uint16_t one_second_flag;
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
-extern USB_OTG_CORE_HANDLE  USB_OTG_dev;
+
+extern USB_OTG_CORE_HANDLE          USB_OTG_Core;
+extern USBH_HOST                    USB_Host;
+
 /* Private function prototypes -----------------------------------------------*/
+extern void USB_OTG_BSP_TimerIRQ (void);
 extern uint32_t USBD_OTG_ISR_Handler (USB_OTG_CORE_HANDLE *pdev);
 #ifdef USB_OTG_HS_DEDICATED_EP1_ENABLED
 extern uint32_t USBD_OTG_EP1IN_ISR_Handler (USB_OTG_CORE_HANDLE *pdev);
@@ -173,7 +180,15 @@ void OTG_HS_IRQHandler(void)
 #ifdef USE_USB_OTG_FS
 void OTG_FS_IRQHandler(void)
 {
-  USBD_OTG_ISR_Handler (&USB_OTG_dev);
+  //USBD_OTG_ISR_Handler (&USB_OTG_dev);
+  if (USB_OTG_IsHostMode(&USB_OTG_Core)) /* ensure that we are in device mode */
+  {
+    USBH_OTG_ISR_Handler(&USB_OTG_Core);
+  }
+  else
+  {
+    USBD_OTG_ISR_Handler(&USB_OTG_Core);
+  }
 }
 #endif
 
@@ -198,6 +213,18 @@ void OTG_HS_EP1_OUT_IRQHandler(void)
   USBD_OTG_EP1OUT_ISR_Handler (&USB_OTG_dev);
 }
 #endif
+
+/**
+  * @brief  TIM2_IRQHandler
+  *         This function handles Timer2 Handler.
+  * @param  None
+  * @retval None
+  */
+void TIM2_IRQHandler(void)
+{
+  USB_OTG_BSP_TimerIRQ();
+  //OS_INT_EXIT_EXT();
+}
 
 /**
   * TIM3 interrupt handler (configured to one second update).
