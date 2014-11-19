@@ -39,15 +39,21 @@ void MyConfigTimers(void){
 void MyConfigGPIO(void){
 
 	GPIO_InitTypeDef GPIO_InitStructure;
-    // activate PORT A
-    RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOA, ENABLE);
+    // activate PORTs
+    RCC_AHB1PeriphClockCmd(LED1_RCC | USER_BTN_RCC, ENABLE);
 
-    // config PortPin
+    // LED PortPin
     GPIO_InitStructure.GPIO_Pin   = LED1;
     GPIO_InitStructure.GPIO_Mode  = GPIO_Mode_OUT;
     GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
     GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
     GPIO_Init(LED1_PORT, &GPIO_InitStructure);
+
+    // User button pin
+    GPIO_InitStructure.GPIO_Pin  = USER_BTN;
+    GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
+    GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL; // Nucleo board already have an pullup.
+    GPIO_Init(USER_BTN_PORT, &GPIO_InitStructure);
 }
 
 void MyConfigUSART(void){

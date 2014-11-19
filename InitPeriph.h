@@ -9,8 +9,12 @@
 #include "misc.h"
 
 
-#define LED1_PORT GPIOA
-#define LED1 GPIO_Pin_5
+#define LED1_PORT 		GPIOA
+#define LED1 			GPIO_Pin_5
+#define LED1_RCC		RCC_AHB1Periph_GPIOC
+#define USER_BTN_PORT	GPIOC
+#define USER_BTN		GPIO_Pin_12
+#define USER_BTN_RCC 	RCC_AHB1Periph_GPIOC
 
 void MyConfigTimers(void);
 void MyConfigGPIO(void);
