@@ -103,6 +103,7 @@
     <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
     <File name="cmsis/core_cm4_simd.h" path="cmsis/core_cm4_simd.h" type="1"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
+    <File name="fatfs/drivers/fatfs_usb.h" path="fatfs/drivers/fatfs_usb.h" type="1"/>
     <File name="USB/OTG_driver/usb_dcd.c" path="USB/OTG_driver/usb_dcd.c" type="1"/>
     <File name="stm32f4xx_it.c" path="stm32f4xx_it.c" type="1"/>
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
@@ -122,6 +123,7 @@
     <File name="USB" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_rcc.h" path="cmsis_lib/include/stm32f4xx_rcc.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_syscfg.c" path="cmsis_lib/source/stm32f4xx_syscfg.c" type="1"/>
+    <File name="fatfs/drivers/fatfs_usb.c" path="fatfs/drivers/fatfs_usb.c" type="1"/>
     <File name="USB/DRD/usbh_msc_usr.c" path="USB/DRD/usbh_msc_usr.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_pwr.h" path="cmsis_lib/include/stm32f4xx_pwr.h" type="1"/>
     <File name="fatfs/option/unicode.c" path="fatfs/option/unicode.c" type="1"/>
@@ -182,8 +184,8 @@
     <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
     <File name="cmsis_boot/system_stm32f4xx.h" path="cmsis_boot/system_stm32f4xx.h" type="1"/>
     <File name="USB/OTG_driver/usb_otg.c" path="USB/OTG_driver/usb_otg.c" type="1"/>
-    <File name="USB/DEVICE_lib/usbd_msc_core.c" path="USB/DEVICE_lib/usbd_msc_core.c" type="1"/>
     <File name="USB/DEVICE_lib/usbd_msc_bot.h" path="USB/DEVICE_lib/usbd_msc_bot.h" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_msc_core.c" path="USB/DEVICE_lib/usbd_msc_core.c" type="1"/>
     <File name="stm32f4xx_it.h" path="stm32f4xx_it.h" type="1"/>
     <File name="USB/DEVICE_lib/usbd_msc_data.c" path="USB/DEVICE_lib/usbd_msc_data.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_sdio.h" path="cmsis_lib/include/stm32f4xx_sdio.h" type="1"/>

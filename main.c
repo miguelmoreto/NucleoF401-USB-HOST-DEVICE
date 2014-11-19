@@ -55,7 +55,7 @@
 #include <stdio.h>
 #include <string.h>
 
-//#define USE_FATFS
+#define USE_FATFS
 //#define USE_USB_DEVICE
 #define USE_USB_HOST
 
@@ -86,9 +86,14 @@ int main()
     SystemCoreClockUpdate();
 #ifdef USE_FATFS
     //Fatfs object
-    FATFS FatFs;
+    FATFS SD_Fs;
     //File object
-    FIL fil;
+    FIL SD_Fil;
+#ifdef USE_USB_HOST
+    FATFS USB_Fs;
+    FIL USB_Fil;
+#endif
+    char buffer[50];
 #endif
     //Free and total space
     uint32_t total, free;
@@ -144,37 +149,40 @@ int main()
     GPIO_SetBits(LED1_PORT, LED1);
 #ifdef USE_FATFS
     //Mount drive
-    if (f_mount(&FatFs, "", 1) == FR_OK) {
+    if (f_mount(&SD_Fs, "0:", 1) == FR_OK) {
         //Mounted OK, turn on RED LED
     	printf("\r\nMount ok.");
         //TM_DISCO_LedOn(LED_RED);
 
         //Try to open file
-        if (f_open(&fil, "1stfile.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE) == FR_OK) {
-            //File opened, turn off RED and turn on GREEN led
-        	printf("\r\nFile opened.");
-            //TM_DISCO_LedOn(LED_GREEN);
-            //TM_DISCO_LedOff(LED_RED);
+        if (f_open(&SD_Fil, "0:sd_file.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE) == FR_OK) {
 
-            //If we put more than 0 characters (everything OK)
-            if (f_puts("First string in my file\n", &fil) > 0) {
-                if (TM_FATFS_DriveSize(&total, &free) == FR_OK) {
-                	printf("\r\nDrive size: %d", total);
-                	printf("\r\nFree space: %d", free);
-                    //Data for drive size are valid
-                }
+			printf("\r\nFile opened.");
 
-                //Turn on both leds
-                //TM_DISCO_LedOn(LED_GREEN | LED_RED);
-                printf("\r\nEverthing ok.");
-            }
+			TM_FATFS_DriveSize(&total, &free);
+			/* Put data */
+			f_puts("This is my first file with SD card and FatFs\n", &SD_Fil);
+			f_puts("with SD card library from stm32f4-discovery.com\n", &SD_Fil);
+			f_puts("----------------------------------------------------\n", &SD_Fil);
+			f_puts("SD card total and free space:\n\n", &SD_Fil);
+			/* Total space */
+			sprintf(buffer, "Total: %8u kB; %5u MB; %2u GB\n", total, total / 1024, total / 1048576);
+			f_puts(buffer, &SD_Fil);
+			/* Free space */
+			sprintf(buffer, "Free:  %8u kB; %5u MB; %2u GB\n", free, free / 1024, free / 1048576);
+			f_puts(buffer, &SD_Fil);
+			f_puts("----------------------------------------------------\n", &SD_Fil);
+			/* Close SD card file */
+			f_close(&SD_Fil);
 
-            //Close file, don't forget this!
-            f_close(&fil);
+			printf("\r\nEverthing ok.");
+
+			//Close file, don't forget this!
+			f_close(&SD_Fil);
         }
 
         //Unmount drive, don't forget this!
-        f_mount(0, "", 1);
+        f_mount(0, "0:", 1);
     }
 
 #endif

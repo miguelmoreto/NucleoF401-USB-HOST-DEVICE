@@ -35,6 +35,21 @@
 //Use writeprotect pin
 #define FATFS_USE_WRITEPROTECT_PIN        0
 
+
+/* This line MUST BE ADDED in order to use FATFS with USB */
+/* Otherwise you will have errors */
+#define FATFS_USE_USB        1
+
+/* By default, if you use USB, then SD card is disabled */
+/* If you don't use USB, then SDIO is used by default! */
+/* If you want to use both, USB and sdcard at the same time, */
+/* then enable SD card communication below: */
+
+/* Enable SDIO communication */
+#define FATFS_USE_SDIO	1
+/* If you want SPI communication instead of SDIO, enable with */
+//#define FATFS_USE_SDIO	0
+
 //If you want to overwrite default CD pin, then change this settings
 /*
 #define FATFS_USE_DETECT_PIN_RCC        RCC_AHB1Periph_GPIOB
