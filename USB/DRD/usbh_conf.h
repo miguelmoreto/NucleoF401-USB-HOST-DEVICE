@@ -44,10 +44,10 @@
   * @{
   */ 
 
-#define USBH_MAX_NUM_ENDPOINTS                2
-#define USBH_MAX_NUM_INTERFACES               2
+#define USBH_MAX_NUM_ENDPOINTS                5
+#define USBH_MAX_NUM_INTERFACES               5
 #ifdef USE_USB_OTG_FS 
-#define USBH_MSC_MPS_SIZE                 0x40
+#define USBH_MSC_MPS_SIZE                 0x200
 #else
 #define USBH_MSC_MPS_SIZE                 0x200
 #endif

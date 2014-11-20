@@ -178,8 +178,8 @@
     <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_tim.h" path="cmsis_lib/include/stm32f4xx_tim.h" type="1"/>
     <File name="USB/DRD/usbd_usr.c" path="USB/DRD/usbd_usr.c" type="1"/>
-    <File name="cmsis_lib/source" path="" type="2"/>
     <File name="USB/DEVICE_lib/usbd_ioreq.c" path="USB/DEVICE_lib/usbd_ioreq.c" type="1"/>
+    <File name="cmsis_lib/source" path="" type="2"/>
     <File name="USB/HOST_lib/usbh_hcs.c" path="USB/HOST_lib/usbh_hcs.c" type="1"/>
     <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
     <File name="cmsis_boot/system_stm32f4xx.h" path="cmsis_boot/system_stm32f4xx.h" type="1"/>

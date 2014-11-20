@@ -483,6 +483,7 @@ uint8_t USBH_MSC_Write10(USB_OTG_CORE_HANDLE *pdev,
   USBH_MSC_Status_TypeDef status = USBH_MSC_BUSY;
   uint16_t nbOfPages;
   
+
   if(HCD_IsDeviceConnected(pdev))
   {  
     switch(USBH_MSC_BOTXferParam.CmdStateMachine)

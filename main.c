@@ -63,6 +63,24 @@
 __ALIGN_BEGIN USB_OTG_CORE_HANDLE    USB_OTG_Core __ALIGN_END;
 __ALIGN_BEGIN USBH_HOST               USB_Host __ALIGN_END;
 
+#ifdef USE_FATFS
+    //Fatfs object
+    FATFS SD_Fs;
+    //File object
+    FIL SD_Fil;
+#ifdef USE_USB_HOST
+    FATFS USB_Fs;
+    FIL USB_Fil;
+	FRESULT fr;    /* FatFs return code */
+	FIL fil;
+	char line[82]; /* Line buffer */
+#endif
+    int var;
+    char buffer[50];
+
+#endif
+
+
 #ifdef __GNUC__
   /* With GCC/RAISONANCE, small printf (option LD Linker->Libraries->Small printf
      set to 'Yes') calls __io_putchar() */
@@ -76,6 +94,7 @@ volatile uint16_t one_second_flag = 0;
 volatile uint8_t usb_host_connected_flag = 0;
 volatile uint8_t usb_host_disconnected_flag = 0;
 
+void printdir(void);
 
 TM_RTC_Time_t datatime;
 
@@ -84,17 +103,7 @@ int main()
 
     SystemInit();
     SystemCoreClockUpdate();
-#ifdef USE_FATFS
-    //Fatfs object
-    FATFS SD_Fs;
-    //File object
-    FIL SD_Fil;
-#ifdef USE_USB_HOST
-    FATFS USB_Fs;
-    FIL USB_Fil;
-#endif
-    char buffer[50];
-#endif
+
     //Free and total space
     uint32_t total, free;
 
@@ -103,7 +112,6 @@ int main()
     MyConfigUSART();
     //MyConfigTimers();
 
-    uint16_t counter = 0;
 
 	/* Initialize RTC with external 32768Hz clock */
 	if (!TM_RTC_Init(TM_RTC_ClockSource_External)) {
@@ -166,19 +174,18 @@ int main()
 			f_puts("----------------------------------------------------\n", &SD_Fil);
 			f_puts("SD card total and free space:\n\n", &SD_Fil);
 			/* Total space */
-			sprintf(buffer, "Total: %8u kB; %5u MB; %2u GB\n", total, total / 1024, total / 1048576);
+			sprintf(buffer, "Total: %lu kB; %lu MB; %lu GB\n", total, total / 1024, total / 1048576);
 			f_puts(buffer, &SD_Fil);
 			/* Free space */
-			sprintf(buffer, "Free:  %8u kB; %5u MB; %2u GB\n", free, free / 1024, free / 1048576);
+			sprintf(buffer, "Free:  %8lu kB; %5lu MB; %2lu GB\n", free, free / 1024, free / 1048576);
 			f_puts(buffer, &SD_Fil);
 			f_puts("----------------------------------------------------\n", &SD_Fil);
 			/* Close SD card file */
 			f_close(&SD_Fil);
 
-			printf("\r\nEverthing ok.");
-
 			//Close file, don't forget this!
 			f_close(&SD_Fil);
+			printf("\r\nFile written to SD card.");
         }
 
         //Unmount drive, don't forget this!
@@ -188,14 +195,51 @@ int main()
 #endif
     /* Main loop */
     while(1){
-
     	if (usb_host_connected_flag){
-    		printf("\r\n A USB device was connected. **");
+    		printf("\r\n** A USB device was connected. **");
     		if (HCD_IsDeviceConnected(&USB_OTG_Core)){
     			while(!USBH_USR_MSC_IsReady()){
     				/* Enumerate and configure connected device.. */
     				USBH_Process(&USB_OTG_Core, &USB_Host);
     			}
+    			/* When entered here USB host MSC is ready. */
+    			if (f_mount(&USB_Fs, "1:", 1) == FR_OK) {
+    				/* Mounted ok */
+    				printdir();
+
+    				/* Open a file for reading and show contents */
+    				fr = f_open(&fil, "1:teste1.txt", FA_READ);
+    				if (!fr){ // Test if the file was opened
+    					while (f_gets(line, sizeof line, &fil))
+    						printf(line);
+    					/* Close the file */
+    					f_close(&fil);
+    					printf("\r\nFile read in USB flash drive.");
+    				}else{
+    					printf("\r\nError opening the file teste1.txt");
+    				}
+#if 1
+    				/* Try to open USB file */
+    				if (f_open(&USB_Fil, "1:usb_file.txt", FA_READ | FA_WRITE | FA_CREATE_ALWAYS) == FR_OK) {
+    					/* Get total and free space on USB */
+    					TM_FATFS_USBDriveSize(&total, &free);
+    					/* Put data */
+    					f_printf(&USB_Fil,"This is my first file with USB and FatFS\n");
+    					f_printf(&USB_Fil,"with USB MSC HOST library from stm32f4-discovery.com\n");
+    					f_printf(&USB_Fil,"USB total and free space:\n");
+    					/* Total space */
+    					f_printf(&USB_Fil,"Total: %8lu kB; %5lu MB; %2lu GB\n", total, total / 1024, total / 1048576);
+    					/* Free space */
+    					f_printf(&USB_Fil,"Free:  %8lu kB; %5lu MB; %2lu GB\n", free, free / 1024, free / 1048576);
+    					f_printf(&USB_Fil,"----------------------------------------------------\n");
+    					/* Close USB file */
+    					f_close(&USB_Fil);
+    					printf("\r\nFile written to USB drive.");
+    				} // f_open
+#endif
+    				/* Unmount USB */
+    				f_mount(0, "1:", 1);
+    			} // f_mount usb
     		}
     		usb_host_connected_flag = 0; // Reset the flag.
     	} // usb_host_flag
@@ -215,7 +259,7 @@ int main()
     		/* Get time */
     		TM_RTC_GetDateTime(&datatime, TM_RTC_Format_BIN);
     		/* Write date and time to USART connected with STLINK (USART2) */
-    		printf("\r\n%02d.%02d.%04d %02d:%02d:%02d",
+    		printf("\r\n%02d/%02d/%04d %02d:%02d:%02d",
     					datatime.date,
     					datatime.month,
     					datatime.year + 2000,
@@ -263,4 +307,40 @@ PUTCHAR_PROTOTYPE
   while (USART_GetFlagStatus(USART2, USART_FLAG_TC) == RESET)
   {}
   return ch;
+}
+
+
+void printdir(void){
+	FILINFO fno;
+	DIR dir;
+	FRESULT res;
+
+	/*Reads the dir list*/
+    res = f_opendir(&dir, "1:");
+	if( res != FR_OK )
+    {
+      /*Could not open the selected directory*/
+	  printf("\r\nCould not open diretory.");
+      return;
+    }
+	printf("\r\n---Contents of the USB flash drive---");
+
+#if _USE_LFN
+	static char lfn[_MAX_LFN + 1];   /* Buffer to store the LFN */
+	fno.lfname = lfn;
+	fno.lfsize = sizeof lfn;
+#endif
+
+	char *fn;   /* This function is assuming non-Unicode cfg. */
+
+    while ((HCD_IsDeviceConnected(&USB_OTG_Core)) && ( f_readdir(&dir, &fno) == FR_OK ) && fno.fname[0] != 0 )
+    {
+#if _USE_LFN
+    	fn = *fno.lfname ? fno.lfname : fno.fname;
+#else
+    	fn = fno.fname;
+#endif
+	  printf("\r\n%s",fn);
+    }
+    printf("\r\n-------------------------------------");
 }

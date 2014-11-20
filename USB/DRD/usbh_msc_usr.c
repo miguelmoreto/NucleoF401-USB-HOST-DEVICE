@@ -50,6 +50,8 @@ FRESULT res;
 uint8_t USBH_USR_ApplicationState = USH_USR_FS_INIT;
 #endif
 
+#define USH_USR_FS_INIT       0
+#define USH_USR_FS_MSC_DONE       1
 
 //#include "lcd_log.h"
 
@@ -96,7 +98,7 @@ extern USB_OTG_CORE_HANDLE          USB_OTG_Core;
 * @{
 */ 
 /* Global variables */
-volatile unsigned int usb_done;
+uint8_t USBH_USR_ApplicationState = USH_USR_FS_INIT;
 
 /*  Points to the DEVICE_PROP structure of current device */
 /*  The purpose of this register is to speed up the execution */
@@ -145,7 +147,7 @@ USBH_Usr_cb_TypeDef USR_USBH_MSC_cb =
 */
 void USBH_USR_Init(void)
 {
-	usb_done = 0;
+	USBH_USR_ApplicationState = USH_USR_FS_INIT;
 #ifdef PRINT_DEBUG_MSG
 	printf("\r\nUSBH_USR> USB Host Init.");
 #endif
@@ -159,7 +161,7 @@ void USBH_USR_Init(void)
 */
 void USBH_USR_DeviceAttached(void)
 {
-	usb_done = 0;
+	USBH_USR_ApplicationState = USH_USR_FS_INIT;
 #ifdef PRINT_DEBUG_MSG
 	printf("\r\nUSBH_USR> USB Host Device Attached.");
 #endif
@@ -173,6 +175,7 @@ void USBH_USR_DeviceAttached(void)
 */
 void USBH_USR_UnrecoveredError (void)
 {
+	USBH_USR_ApplicationState = USH_USR_FS_INIT;
 #ifdef PRINT_DEBUG_MSG
   printf("\r\nUSBH_USR> UNRECOVERED ERROR STATE");
 #endif
@@ -187,6 +190,7 @@ void USBH_USR_UnrecoveredError (void)
 */
 void USBH_USR_DeviceDisconnected (void)
 {
+	USBH_USR_ApplicationState = USH_USR_FS_INIT;
 #ifdef PRINT_DEBUG_MSG
   printf("\r\nUSBH_USR> Device Disconnected");
 #endif
@@ -199,6 +203,7 @@ void USBH_USR_DeviceDisconnected (void)
 */
 void USBH_USR_ResetDevice(void)
 {
+	USBH_USR_ApplicationState = USH_USR_FS_INIT;
   /* callback for USB-Reset */
 #ifdef PRINT_DEBUG_MSG
 	printf("\r\nUSBH_USR> Device Reset");
@@ -380,7 +385,6 @@ USBH_USR_Status USBH_USR_UserInput(void)
 #ifdef PRINT_DEBUG_MSG
 	printf("\r\nUSBH_USR> User responded!");
 #endif
-	//Enum_Done = 1;
 	return USBH_USR_RESP_OK;
 }  
 
@@ -408,11 +412,14 @@ int USBH_USR_MSC_Application(void)
 {
 	/* When this callback is executed, the USB MSC device connected is
 	 * ready to use. */
+	if (USBH_USR_ApplicationState == USH_USR_FS_INIT) {
+		USBH_USR_ApplicationState = USH_USR_FS_MSC_DONE;
 #ifdef PRINT_DEBUG_MSG
-	printf("\r\nUSBH_USR> USR application.");
+		printf("\r\nUSBH_USR> USR application.");
 #endif
-	usb_done = 1;
-
+	}
+	return 0;
+}
 //	  printf("\r\n----------------------------------------1");
 #if 0
 	  switch(USBH_USR_ApplicationState)
@@ -536,11 +543,10 @@ int USBH_USR_MSC_Application(void)
 	  default: break;
 	  }
 #endif
-	  return(0);
-}
+
 
 unsigned int USBH_USR_MSC_IsReady(void){
-	return usb_done;
+	return USBH_USR_ApplicationState;
 }
 
 /**
@@ -551,8 +557,7 @@ unsigned int USBH_USR_MSC_IsReady(void){
 */
 void USBH_USR_DeInit(void)
 {
-	usb_done = 0;
- // USBH_USR_ApplicationState = USH_USR_FS_INIT;
+	USBH_USR_ApplicationState = USH_USR_FS_INIT;
 }
 
 

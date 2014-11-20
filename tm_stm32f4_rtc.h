@@ -89,7 +89,7 @@
 #endif
 /* Sub priority for wakeup trigger */
 #ifndef RTC_WAKEUP_SUBPRIORITY
-#define RTC_WAKEUP_SUBPRIORITY			0x00
+#define RTC_WAKEUP_SUBPRIORITY			0x01
 #endif
 /* Sub priority for alarm trigger */
 #ifndef RTC_ALARM_SUBPRIORITY

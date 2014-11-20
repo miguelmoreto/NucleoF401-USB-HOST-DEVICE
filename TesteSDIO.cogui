@@ -11,62 +11,29 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
-<part id="7"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/main.c" title="main.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5405" selectionTopPixel="2524"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usbh_msc_usr.c" partName="usbh_msc_usr.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbh_msc_usr.c" title="usbh_msc_usr.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbh_msc_usr.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/USB/DRD/usbh_msc_usr.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="13255" selectionTopPixel="7650"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" partName="stm32f4xx_it.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/stm32f4xx_it.c" title="stm32f4xx_it.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/stm32f4xx_it.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/stm32f4xx_it.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1950" selectionTopPixel="270"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="InitPeriph.c" partName="InitPeriph.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/InitPeriph.c" title="InitPeriph.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/InitPeriph.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/InitPeriph.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1070" selectionTopPixel="129"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usb_bsp.c" partName="usb_bsp.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usb_bsp.c" title="usb_bsp.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usb_bsp.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/USB/DRD/usb_bsp.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="15407" selectionTopPixel="7560"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usbh_core.c" partName="usbh_core.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/HOST_lib/usbh_core.c" title="usbh_core.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/HOST_lib/usbh_core.c" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/USB/HOST_lib/usbh_core.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="11" selectionOffset="4806" selectionTopPixel="2775"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usbh_msc_usr.h" partName="usbh_msc_usr.h" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbh_msc_usr.h" title="usbh_msc_usr.h" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbh_msc_usr.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/USB/DRD/usbh_msc_usr.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3323" selectionTopPixel="1269"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="defines.h" partName="defines.h" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/defines.h" title="defines.h" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/defines.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/defines.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="22" selectionOffset="1164" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9778" selectionTopPixel="4494"/>
 </editor>
 </editors>
 <views>
 <view id="org.coocox.builder.ui.views.ProjectView" partName="Project">
-<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="16">
+<viewState CommonNavigator.LINKING_ENABLED="0" horizontalPosition="0" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0" verticalPosition="0">
 <expanded>
 <element path="/TesteSDIO"/>
+<element path="/TesteSDIO/cmsis"/>
+<element path="/TesteSDIO/fatfs"/>
+<element path="/TesteSDIO/stdio"/>
 <element path="/TesteSDIO/USB"/>
 <element path="/TesteSDIO/USB/DRD"/>
 <element path="/TesteSDIO/USB/HOST_lib"/>
-<element path="/TesteSDIO/USB/OTG_driver"/>
 </expanded>
 <selection>
-<element path="/TesteSDIO/USB/HOST_lib/usbh_msc_core.c"/>
+<element path="/TesteSDIO/fatfs/ffconf.h"/>
 </selection>
 </viewState>
 </view>
@@ -83,6 +50,9 @@
 <viewState/>
 </view>
 <view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
+<view id="org.coocox.component.ui.Help" partName="Help">
 <viewState/>
 </view>
 <view id="org.eclipse.ui.views.ContentOutline" partName="Outline">
@@ -123,6 +93,7 @@
 <view id="org.coocox.builder.ui.views.ProjectView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.coocox.component.ui.Help"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -157,12 +128,13 @@
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@1f7309a" ratio="0.74433964" ratioLeft="789" ratioRight="271" relationship="2" relative="org.eclipse.ui.internal.ViewStack@16c243f">
 <folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
-<page content="org.coocox.component.ui.Help" label="LabelNotFound"/>
+<page content="org.coocox.component.ui.Help" label="Help"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
 <page content="org.coocox.coassistant.view.CoAssistantView" label="LabelNotFound"/>
 <page content="org.coocox.builder.ui.MoreExampleView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
+<part id="1"/>
 </presentation>
 </folder>
 </info>
@@ -229,34 +201,49 @@
 <view id="org.coocox.builder.ui.views.ProjectView"/>
 <fastViewBars/>
 <viewLayoutRec closeable="false" id="org.eclipse.debug.ui.DebugView"/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.ui.internal.ViewStack@fcaed0">&#x0A;<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">&#x0A;<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<layout>
+<mainWindow>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@fcaed0">
+<folder activePageID="org.coocox.builder.ui.views.ProjectView" appearance="2" expanded="2">
+<page content="org.coocox.builder.ui.views.ProjectView" label="Project"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.internal.ViewStack@fcaed0">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="stickyFolderRight" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.internal.ViewStack@fcaed0">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@548ea9" ratio="0.69952303" ratioLeft="440" ratioRight="189" relationship="4" relative="org.eclipse.ui.internal.ViewStack@fcaed0">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@548ea9" ratio="0.69009584" ratioLeft="648" ratioRight="291" relationship="4" relative="org.eclipse.ui.internal.ViewStack@fcaed0">
+<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@1621e58" ratio="0.5" ratioLeft="679" ratioRight="679" relationship="2" relative="org.eclipse.ui.internal.ViewStack@548ea9">&#x0A;<folder activePageID="org.coocox.codebugger.trace.ui.traceview" appearance="2" expanded="2">&#x0A;<page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@1621e58" ratio="0.5" ratioLeft="679" ratioRight="679" relationship="2" relative="org.eclipse.ui.internal.ViewStack@548ea9">
+<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">
+<page content="org.coocox.codebugger.trace.ui.traceview" label="Semihosting"/>
 <page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@b6379b" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.internal.ViewStack@fcaed0">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@b6379b" ratio="0.7496318" ratioLeft="1018" ratioRight="340" relationship="2" relative="org.eclipse.ui.internal.ViewStack@fcaed0">
+<folder appearance="2" expanded="2">
+<page content="org.eclipse.cdt.dsf.debug.ui.disassembly.view" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ContentOutline" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.coocox.coassistant.view.CoAssistantView_debug" label="LabelNotFound"/>
@@ -272,162 +259,162 @@
 <navigationHistory>
 <editors>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/main.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/USB/DRD/usbh_msc_usr.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/USB/HOST_lib/usbh_core.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/USB/DRD/usbh_msc_usr.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/USB/HOST_lib/usbh_core.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/USB/HOST_lib/usbh_msc_core.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/defines.h"/>
+<editor factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser">
+<subPage/>
+</editor>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/stdio/printf.c"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="D:\STM32\GCC\arm-none-eabi\include\stdio.h" project="TesteSDIO"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="D:\STM32\GCC\lib\gcc\arm-none-eabi\4.8.4\include\stddef.h" project="TesteSDIO"/>
+<editor factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="D:\STM32\GCC\arm-none-eabi\include\sys\types.h" project="TesteSDIO"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/fatfs/ffconf.h"/>
 </editors>
-<item historyLabel="usbh_core.c" index="2">
-<position info="not_deleted" x="3300" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="8498" y="16"/>
 </item>
-<item historyLabel="usbh_core.c" index="2">
-<position info="not_deleted" x="8279" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="8333" y="0"/>
 </item>
-<item historyLabel="usbh_core.h" index="4">
-<position info="not_deleted" x="4602" y="8"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="3196" y="0"/>
 </item>
-<item historyLabel="usbh_core.c" index="2">
-<position info="not_deleted" x="8279" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="5639" y="21"/>
 </item>
-<item historyLabel="usbh_msc_core.c" index="5">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="5637" y="0"/>
 </item>
-<item historyLabel="usbh_msc_core.c" index="5">
-<position info="not_deleted" x="1411" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="5639" y="0"/>
 </item>
-<item historyLabel="usbh_msc_core.c" index="5">
-<position info="not_deleted" x="9115" y="0"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="5270" y="29"/>
 </item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="8283" y="0"/>
+<item historyLabel="Repository" index="1"/>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="5037" y="0"/>
 </item>
-<item historyLabel="usbh_msc_usr.h" index="3">
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="12402" y="7"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="12594" y="0"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="440" y="0"/>
+</item>
+<item historyLabel="stdio.h" index="3">
 <position/>
 </item>
-<item historyLabel="defines.h" index="6">
-<position info="not_deleted" x="1164" y="22"/>
-</item>
-<item historyLabel="usbh_msc_core.c" index="5">
-<position info="not_deleted" x="9115" y="0"/>
-</item>
-<item historyLabel="defines.h" index="6">
-<position info="not_deleted" x="1164" y="22"/>
-</item>
-<item historyLabel="usbh_msc_usr.h" index="3">
-<position info="not_deleted" x="3748" y="22"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="8283" y="0"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="9274" y="24"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="9474" y="0"/>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="8493" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5595" y="0"/>
+<position info="not_deleted" x="5062" y="0"/>
 </item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="9481" y="0"/>
-</item>
-<item historyLabel="usbh_msc_usr.h" index="3">
-<position info="not_deleted" x="3295" y="39"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="9477" y="12"/>
-</item>
-<item historyLabel="usbh_msc_usr.h" index="3">
-<position info="not_deleted" x="1445" y="0"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="9477" y="12"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="2499" y="0"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="3533" y="13"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="3571" y="0"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="13049" y="20"/>
-</item>
-<item historyLabel="usbh_msc_usr.h" index="3">
-<position info="not_deleted" x="1445" y="0"/>
-</item>
-<item historyLabel="usbh_msc_usr.h" index="3">
-<position info="not_deleted" x="3308" y="20"/>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="8289" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5595" y="0"/>
+<position info="not_deleted" x="5062" y="0"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="8289" y="0"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="8291" y="0"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="7036" y="7"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="2091" y="14"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="3066" y="0"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="2091" y="14"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="3060" y="15"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="2091" y="14"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="3060" y="15"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="2091" y="14"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="3060" y="15"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="2091" y="14"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="3060" y="15"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="9107" y="0"/>
+</item>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="3618" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5525" y="20"/>
+<position info="not_deleted" x="5629" y="0"/>
 </item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="13069" y="0"/>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="438" y="0"/>
 </item>
-<item historyLabel="usbh_msc_usr.h" index="3">
-<position info="not_deleted" x="3328" y="0"/>
+<item historyLabel="stdio.h" index="3">
+<position/>
 </item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="13069" y="0"/>
+<item historyLabel="stddef.h" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5603" y="0"/>
+<item historyLabel="stdio.h" index="3">
+<position/>
 </item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="13069" y="0"/>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="438" y="0"/>
 </item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="3840" y="0"/>
+<item historyLabel="stdio.h" index="3">
+<position info="not_deleted" x="1474" y="0"/>
 </item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="9492" y="0"/>
+<item historyLabel="types.h" index="5">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="usbh_msc_usr.h" index="3">
-<position info="not_deleted" x="3308" y="20"/>
+<item historyLabel="stdio.h" index="3">
+<position info="not_deleted" x="1221" y="0"/>
 </item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="9474" y="0"/>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="438" y="0"/>
 </item>
-<item historyLabel="main.c" index="0">
-<position info="not_deleted" x="6057" y="0"/>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="8863" y="0"/>
 </item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="3570" y="0"/>
-</item>
-<item historyLabel="usbh_msc_usr.h" index="3">
-<position info="not_deleted" x="3276" y="0"/>
+<item historyLabel="printf.c" index="2">
+<position info="not_deleted" x="3744" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5540" y="0"/>
-</item>
-<item historyLabel="usbh_msc_usr.h" index="3">
-<position info="not_deleted" x="3323" y="0"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="3570" y="0"/>
+<position info="not_deleted" x="5629" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5675" y="0"/>
-</item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="4376" y="0"/>
+<position info="not_deleted" x="5077" y="0"/>
 </item>
 <item historyLabel="main.c" index="0">
-<position info="not_deleted" x="5917" y="0"/>
+<position info="not_deleted" x="10104" y="0"/>
 </item>
-<item historyLabel="usbh_msc_usr.c" index="1">
-<position info="not_deleted" x="13255" y="0"/>
+<item historyLabel="ffconf.h" index="6">
+<position info="not_deleted" x="2022" y="0"/>
 </item>
 <item active="true" historyLabel="main.c" index="0">
-<position info="not_deleted" x="5917" y="0"/>
+<position info="not_deleted" x="10104" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -436,50 +423,49 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="defines.h" tooltip="TesteSDIO/defines.h">
-<persistable path="/TesteSDIO/defines.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ffconf.h" tooltip="TesteSDIO/fatfs/ffconf.h">
+<persistable path="/TesteSDIO/fatfs/ffconf.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbh_msc_core.c" tooltip="TesteSDIO/USB/HOST_lib/usbh_msc_core.c">
-<persistable path="/TesteSDIO/USB/HOST_lib/usbh_msc_core.c"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="types.h" tooltip="D:\STM32\GCC\arm-none-eabi\include\sys\types.h">
+<persistable path="D:\STM32\GCC\arm-none-eabi\include\sys\types.h" project="TesteSDIO"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbh_core.h" tooltip="TesteSDIO/USB/HOST_lib/usbh_core.h">
-<persistable path="/TesteSDIO/USB/HOST_lib/usbh_core.h"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stdio.h" tooltip="D:\STM32\GCC\arm-none-eabi\include\stdio.h">
+<persistable path="D:\STM32\GCC\arm-none-eabi\include\stdio.h" project="TesteSDIO"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_req.h" tooltip="TesteSDIO/USB/DEVICE_lib/usbd_req.h">
-<persistable path="/TesteSDIO/USB/DEVICE_lib/usbd_req.h"/>
+<file factoryID="org.eclipse.cdt.ui.ExternalEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stddef.h" tooltip="D:\STM32\GCC\lib\gcc\arm-none-eabi\4.8.4\include\stddef.h">
+<persistable path="D:\STM32\GCC\lib\gcc\arm-none-eabi\4.8.4\include\stddef.h" project="TesteSDIO"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_desc.c" tooltip="TesteSDIO/USB/DRD/usbd_desc.c">
-<persistable path="/TesteSDIO/USB/DRD/usbd_desc.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="printf.c" tooltip="TesteSDIO/stdio/printf.c">
+<persistable path="/TesteSDIO/stdio/printf.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_conf.h" tooltip="TesteSDIO/USB/DRD/usb_conf.h">
-<persistable path="/TesteSDIO/USB/DRD/usb_conf.h"/>
+<file factoryID="org.coocox.component.ui.editors.repository.RepositoryElementFactory" id="org.coocox.builder.ui.editors.repository.RepositoryBrowser" name="Repository" tooltip="Repository">
+<persistable>
+<subPage/>
+</persistable>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_hcd_int.h" tooltip="TesteSDIO/USB/OTG_driver/usb_hcd_int.h">
-<persistable path="/TesteSDIO/USB/OTG_driver/usb_hcd_int.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_hcd_int.c" tooltip="TesteSDIO/USB/OTG_driver/usb_hcd_int.c">
-<persistable path="/TesteSDIO/USB/OTG_driver/usb_hcd_int.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbh_msc_usr.h" tooltip="TesteSDIO/USB/DRD/usbh_msc_usr.h">
-<persistable path="/TesteSDIO/USB/DRD/usbh_msc_usr.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_rtc.c" tooltip="TesteSDIO/tm_stm32f4_rtc.c">
+<persistable path="/TesteSDIO/tm_stm32f4_rtc.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_rtc.h" tooltip="TesteSDIO/tm_stm32f4_rtc.h">
 <persistable path="/TesteSDIO/tm_stm32f4_rtc.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_fatfs.h" tooltip="TesteSDIO/tm_stm32f4_fatfs.h">
-<persistable path="/TesteSDIO/tm_stm32f4_fatfs.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="diskio.c" tooltip="TesteSDIO/fatfs/diskio.c">
+<persistable path="/TesteSDIO/fatfs/diskio.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbh_core.c" tooltip="TesteSDIO/USB/HOST_lib/usbh_core.c">
-<persistable path="/TesteSDIO/USB/HOST_lib/usbh_core.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ff.h" tooltip="TesteSDIO/fatfs/ff.h">
+<persistable path="/TesteSDIO/fatfs/ff.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="TesteSDIO/stm32f4xx_it.c">
+<persistable path="/TesteSDIO/stm32f4xx_it.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_bsp.c" tooltip="TesteSDIO/USB/DRD/usb_bsp.c">
 <persistable path="/TesteSDIO/USB/DRD/usb_bsp.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InitPeriph.c" tooltip="TesteSDIO/InitPeriph.c">
-<persistable path="/TesteSDIO/InitPeriph.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="misc.h" tooltip="TesteSDIO/cmsis_lib/include/misc.h">
+<persistable path="/TesteSDIO/cmsis_lib/include/misc.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.h" tooltip="TesteSDIO/stm32f4xx_it.h">
-<persistable path="/TesteSDIO/stm32f4xx_it.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_conf.h" tooltip="TesteSDIO/USB/DRD/usb_conf.h">
+<persistable path="/TesteSDIO/USB/DRD/usb_conf.h"/>
 </file>
 </mruList>
 </workbench>

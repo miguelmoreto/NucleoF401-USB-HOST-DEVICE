@@ -111,7 +111,7 @@ static uint32_t BOTStallErrorCount;   /* Keeps count of STALL Error Cases*/
 /** @defgroup USBH_MSC_BOT_Exported_Variables
 * @{
 */ 
-USBH_BOTXfer_TypeDef USBH_MSC_BOTXferParam; 
+USBH_BOTXfer_TypeDef USBH_MSC_BOTXferParam;
 /**
 * @}
 */ 
