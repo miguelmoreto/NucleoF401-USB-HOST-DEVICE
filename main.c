@@ -91,6 +91,7 @@ __ALIGN_BEGIN USBH_HOST               USB_Host __ALIGN_END;
 
 /* Flag that is set in interrupt handler. Avoid doing slow stuff in interrupt handlers. */
 volatile uint16_t one_second_flag = 0;
+volatile uint8_t button_press = 0;
 volatile uint8_t usb_host_connected_flag = 0;
 volatile uint8_t usb_host_disconnected_flag = 0;
 
@@ -269,6 +270,11 @@ int main()
     		/* Reset flag */
     		one_second_flag = 0;
     	} // end one_second_flag
+
+    	if (button_press){
+    		printf("\r\nButton press.");
+    		button_press = 0;
+    	}
     } // end main loop
 
 } // end main

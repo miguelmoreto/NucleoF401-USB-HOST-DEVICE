@@ -38,6 +38,7 @@
 
 /* External variables ---------------------------------------------------------*/
 extern volatile uint16_t one_second_flag;
+extern volatile uint8_t button_press;
 
 /* Private typedef -----------------------------------------------------------*/
 /* Private define ------------------------------------------------------------*/
@@ -246,6 +247,20 @@ void TIM3_IRQHandler(){
 
 }
 
+/**
+  * @brief  This function handles External lines 15 to 10 interrupt request.
+  * @param  None
+  * @retval None
+  */
+void EXTI15_10_IRQHandler(void)
+{
+	if(EXTI_GetITStatus(EXTI_Line13) != RESET)
+	{
+		button_press = 1;
+		/* Clear the EXTI line 15 pending bit */
+		EXTI_ClearITPendingBit(EXTI_Line13);
+	}
+}
 
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

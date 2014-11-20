@@ -39,8 +39,13 @@ void MyConfigTimers(void){
 void MyConfigGPIO(void){
 
 	GPIO_InitTypeDef GPIO_InitStructure;
+	NVIC_InitTypeDef NVIC_InitStructure;
+	EXTI_InitTypeDef   EXTI_InitStructure;
+
     // activate PORTs
     RCC_AHB1PeriphClockCmd(LED1_RCC | USER_BTN_RCC, ENABLE);
+    /* Enable SYSCFG clock */
+    RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
 
     // LED PortPin
     GPIO_InitStructure.GPIO_Pin   = LED1;
@@ -54,6 +59,24 @@ void MyConfigGPIO(void){
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
     GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL; // Nucleo board already have an pullup.
     GPIO_Init(USER_BTN_PORT, &GPIO_InitStructure);
+
+    /* Connect EXTI Line12 to PC12 pin */
+    SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOC, EXTI_PinSource13);
+    /* Configure EXTI Line12 */
+    EXTI_InitStructure.EXTI_Line = EXTI_Line13;
+    EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;
+    EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;
+    EXTI_InitStructure.EXTI_LineCmd = ENABLE;
+    EXTI_Init(&EXTI_InitStructure);
+#if 1
+    /* Enable and set EXTI Line12 Interrupt to the lowest priority */
+    NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;
+    NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x0F;
+    NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x0F;
+    NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
+    NVIC_Init(&NVIC_InitStructure);
+#endif
+
 }
 
 void MyConfigUSART(void){
