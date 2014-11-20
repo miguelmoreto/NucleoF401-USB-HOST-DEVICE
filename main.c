@@ -59,6 +59,9 @@
 //#define USE_USB_DEVICE
 #define USE_USB_HOST
 
+#define MODE_USB_HOST	0
+#define MODE_USB_DEVICE	1
+
 //__ALIGN_BEGIN USB_OTG_CORE_HANDLE     USB_OTG_dev  __ALIGN_END ;
 __ALIGN_BEGIN USB_OTG_CORE_HANDLE    USB_OTG_Core __ALIGN_END;
 __ALIGN_BEGIN USBH_HOST               USB_Host __ALIGN_END;
@@ -107,6 +110,7 @@ int main()
 
     //Free and total space
     uint32_t total, free;
+    uint8_t mode = MODE_USB_HOST;
 
     /* Configuring Peripherals: */
     MyConfigGPIO();
@@ -135,7 +139,10 @@ int main()
 	TM_RTC_Interrupts(TM_RTC_Int_1s);
 
 #ifdef USE_USB_DEVICE
-	  USBD_Init(&USB_OTG_Core,
+	if (mode == MODE_USB_DEVICE){
+		USBD_Init(&USB_OTG_Core,USB_OTG_FS_CORE_ID,&USR_desc,&USBD_MSC_cb,&USR_cb);
+	}
+	USBD_Init(&USB_OTG_Core,
 	#ifdef USE_USB_OTG_HS
 	            USB_OTG_HS_CORE_ID,
 	#else
@@ -196,6 +203,30 @@ int main()
 #endif
     /* Main loop */
     while(1){
+
+    	if (mode == MODE_USB_DEVICE){
+
+    		/* Re-Initilaize Host for new Enumeration */
+    		USBH_DeInit(&USB_OTG_Core, &USB_Host);
+    		USB_Host.usr_cb->DeInit();
+    		USB_Host.class_cb->DeInit(&USB_OTG_Core, &USB_Host.device_prop);
+    		usb_host_disconnected_flag = 0;
+
+    		USB_OTG_BSP_DriveVBUS(&USB_OTG_Core, 0);
+
+    		printf("\n\r> Initializing USB Device Full speed...");
+    		USBD_Init(&USB_OTG_Core,USB_OTG_FS_CORE_ID,&USR_desc,&USBD_MSC_cb,&USR_cb);
+    		printf("\n\r> USB Device Full speed initialized.");
+    		GPIO_SetBits(LED1_PORT, LED1);
+    		while (!button_press){
+    			/* Do nothing while in usb device*/
+    			/* Wait for user button to go out of the loop, after
+    			 * that, enables host again.*/
+    		}
+    		//button_press = 0;
+    	}
+
+
     	if (usb_host_connected_flag){
     		printf("\r\n** A USB device was connected. **");
     		if (HCD_IsDeviceConnected(&USB_OTG_Core)){
@@ -273,6 +304,19 @@ int main()
 
     	if (button_press){
     		printf("\r\nButton press.");
+    		if (mode == MODE_USB_DEVICE){
+    			mode = MODE_USB_HOST;
+        		/* Re-Initilaize Host for new Enumeration */
+        		USBH_DeInit(&USB_OTG_Core, &USB_Host);
+        		USB_Host.usr_cb->DeInit();
+        		USB_Host.class_cb->DeInit(&USB_OTG_Core, &USB_Host.device_prop);
+        		usb_host_disconnected_flag = 0;
+    			printf("\n\r> Initializing USB Host Full speed...");
+    			USBH_Init(&USB_OTG_Core,USB_OTG_FS_CORE_ID,&USB_Host,&USBH_MSC_cb,&USR_USBH_MSC_cb);
+    			printf("\n\r> USB Host Full speed initialized.");
+    		}else{
+    			mode = MODE_USB_DEVICE;
+    		}
     		button_press = 0;
     	}
     } // end main loop
