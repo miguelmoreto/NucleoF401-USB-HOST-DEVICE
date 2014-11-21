@@ -23,9 +23,9 @@
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/main.c" title="main.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Desenvolvimento/STM32/STM32-Nucleo/Projects/TesteSDIO-USB/main.c" title="main.c" tooltip="D:/Desenvolvimento/STM32/STM32-Nucleo/Projects/TesteSDIO-USB/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5951" selectionTopPixel="2844"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3971" selectionTopPixel="2249"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="InitPeriph.c" partName="InitPeriph.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/InitPeriph.c" title="InitPeriph.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/InitPeriph.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/InitPeriph.c"/>
@@ -448,47 +448,47 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_bsp.c" tooltip="TesteSDIO/USB/DRD/usb_bsp.c">
-<persistable path="/TesteSDIO/USB/DRD/usb_bsp.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_usr.c" tooltip="TesteSDIO/USB/DRD/usbd_usr.c">
+<persistable path="/TesteSDIO/USB/DRD/usbd_usr.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbh_core.c" tooltip="TesteSDIO/USB/HOST_lib/usbh_core.c">
-<persistable path="/TesteSDIO/USB/HOST_lib/usbh_core.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_usr.h" tooltip="TesteSDIO/USB/DEVICE_lib/usbd_usr.h">
+<persistable path="/TesteSDIO/USB/DEVICE_lib/usbd_usr.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx.h" tooltip="TesteSDIO/cmsis_boot/stm32f4xx.h">
-<persistable path="/TesteSDIO/cmsis_boot/stm32f4xx.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_storage_msd.c" tooltip="TesteSDIO/USB/DRD/usbd_storage_msd.c">
+<persistable path="/TesteSDIO/USB/DRD/usbd_storage_msd.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_rtc.c" tooltip="TesteSDIO/tm_stm32f4_rtc.c">
-<persistable path="/TesteSDIO/tm_stm32f4_rtc.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_msc_data.c" tooltip="TesteSDIO/USB/DEVICE_lib/usbd_msc_data.c">
+<persistable path="/TesteSDIO/USB/DEVICE_lib/usbd_msc_data.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_exti.h" tooltip="TesteSDIO/cmsis_lib/include/stm32f4xx_exti.h">
-<persistable path="/TesteSDIO/cmsis_lib/include/stm32f4xx_exti.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_core.h" tooltip="TesteSDIO/USB/OTG_driver/usb_core.h">
+<persistable path="/TesteSDIO/USB/OTG_driver/usb_core.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="TesteSDIO/cmsis_boot/startup/startup_stm32f4xx.c">
-<persistable path="/TesteSDIO/cmsis_boot/startup/startup_stm32f4xx.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_core.c" tooltip="TesteSDIO/USB/DEVICE_lib/usbd_core.c">
+<persistable path="/TesteSDIO/USB/DEVICE_lib/usbd_core.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="defines.h" tooltip="TesteSDIO/defines.h">
-<persistable path="/TesteSDIO/defines.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_bsp.c" tooltip="TesteUSB-DRD/USB_lib_driver/usb_bsp.c">
+<persistable path="/TesteUSB-DRD/USB_lib_driver/usb_bsp.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_it.c" tooltip="TesteSDIO/stm32f4xx_it.c">
-<persistable path="/TesteSDIO/stm32f4xx_it.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InitPeriph.h" tooltip="TesteUSB-DRD/InitPeriph.h">
+<persistable path="/TesteUSB-DRD/InitPeriph.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_conf.h" tooltip="TesteSDIO/cmsis_boot/stm32f4xx_conf.h">
-<persistable path="/TesteSDIO/cmsis_boot/stm32f4xx_conf.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InitPeriph.c" tooltip="TesteUSB-DRD/InitPeriph.c">
+<persistable path="/TesteUSB-DRD/InitPeriph.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_syscfg.h" tooltip="TesteSDIO/cmsis_lib/include/stm32f4xx_syscfg.h">
-<persistable path="/TesteSDIO/cmsis_lib/include/stm32f4xx_syscfg.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="TesteUSB-DRD/main.c">
+<persistable path="/TesteUSB-DRD/main.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InitPeriph.h" tooltip="TesteSDIO/InitPeriph.h">
-<persistable path="/TesteSDIO/InitPeriph.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_hcd.c" tooltip="BirdBoxV2/STM32_USB_OTG_Driver/usb_hcd.c">
+<persistable path="/BirdBoxV2/STM32_USB_OTG_Driver/usb_hcd.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="InitPeriph.c" tooltip="TesteSDIO/InitPeriph.c">
-<persistable path="/TesteSDIO/InitPeriph.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbh_msc_bot.c" tooltip="BirdBoxV2/STM32_USB_HOST_Library/Class/usbh_msc_bot.c">
+<persistable path="/BirdBoxV2/STM32_USB_HOST_Library/Class/usbh_msc_bot.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_hcd.c" tooltip="TesteSDIO/USB/OTG_driver/usb_hcd.c">
-<persistable path="/TesteSDIO/USB/OTG_driver/usb_hcd.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbh_msc_scsi.c" tooltip="BirdBoxV2/STM32_USB_HOST_Library/Class/usbh_msc_scsi.c">
+<persistable path="/BirdBoxV2/STM32_USB_HOST_Library/Class/usbh_msc_scsi.c"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_core.c" tooltip="TesteSDIO/USB/OTG_driver/usb_core.c">
-<persistable path="/TesteSDIO/USB/OTG_driver/usb_core.c"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="diskio.c" tooltip="BirdBoxV2/FATFS/diskio.c">
+<persistable path="/BirdBoxV2/FATFS/diskio.c"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usb_dcd.c" tooltip="TesteSDIO/USB/OTG_driver/usb_dcd.c">
 <persistable path="/TesteSDIO/USB/OTG_driver/usb_dcd.c"/>

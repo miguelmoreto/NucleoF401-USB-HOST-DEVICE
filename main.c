@@ -56,7 +56,7 @@
 #include <string.h>
 
 #define USE_FATFS
-#define USE_USB_DEVICE
+//#define USE_USB_DEVICE
 #define USE_USB_HOST
 
 #define MODE_USB_HOST	0
@@ -155,11 +155,11 @@ int main()
 		  while(1){
 			  /* Read VBUS pin, when cable is disconnected
 			   * system resets. */
-			  if (GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_9)==RESET){
-				  NVIC_SystemReset();
-			  }
+			  //if (GPIO_ReadInputDataBit(GPIOA,GPIO_Pin_9)==RESET){
+			//	  NVIC_SystemReset();
+			  //}
 		  }
-	  }
+	 }
 #endif
 
 #ifdef USE_USB_HOST
@@ -172,9 +172,7 @@ int main()
 #ifdef USE_FATFS
     //Mount drive
     if (f_mount(&SD_Fs, "0:", 1) == FR_OK) {
-        //Mounted OK, turn on RED LED
     	printf("\r\nMount ok.");
-        //TM_DISCO_LedOn(LED_RED);
 
         //Try to open file
         if (f_open(&SD_Fil, "0:sd_file.txt", FA_OPEN_ALWAYS | FA_READ | FA_WRITE) == FR_OK) {
@@ -183,17 +181,15 @@ int main()
 
 			TM_FATFS_DriveSize(&total, &free);
 			/* Put data */
-			f_puts("This is my first file with SD card and FatFs\n", &SD_Fil);
-			f_puts("with SD card library from stm32f4-discovery.com\n", &SD_Fil);
-			f_puts("----------------------------------------------------\n", &SD_Fil);
-			f_puts("SD card total and free space:\n\n", &SD_Fil);
+			f_printf(&SD_Fil,"This is my first file with SD card and FatFs\n");
+			f_printf(&SD_Fil,"with SD card library from stm32f4-discovery.com\n");
+			f_printf(&SD_Fil,"----------------------------------------------------\n");
+			f_printf(&SD_Fil,"SD card total and free space:\n\n");
 			/* Total space */
-			sprintf(buffer, "Total: %lu kB; %lu MB; %lu GB\n", total, total / 1024, total / 1048576);
-			f_puts(buffer, &SD_Fil);
+			f_printf(&SD_Fil,"Total: %8lu kB; %5lu MB; %2lu GB\n", total, total / 1024, total / 1048576);
 			/* Free space */
-			sprintf(buffer, "Free:  %8lu kB; %5lu MB; %2lu GB\n", free, free / 1024, free / 1048576);
-			f_puts(buffer, &SD_Fil);
-			f_puts("----------------------------------------------------\n", &SD_Fil);
+			f_printf(&SD_Fil,"Free:  %8lu kB; %5lu MB; %2lu GB\n", free, free / 1024, free / 1048576);
+			f_printf(&SD_Fil,"----------------------------------------------------\n");
 			/* Close SD card file */
 			f_close(&SD_Fil);
 
@@ -209,7 +205,7 @@ int main()
 #endif
     /* Main loop */
     while(1){
-#if 0
+#if 1
     	if (mode == MODE_USB_DEVICE){
 
     		USB_OTG_BSP_DriveVBUS(&USB_OTG_Core, 0);
@@ -227,10 +223,11 @@ int main()
 			USBH_Init(&USB_OTG_Core,USB_OTG_FS_CORE_ID,&USB_Host,&USBH_MSC_cb,&USR_USBH_MSC_cb);
 			printf("\n\r> USB Host Full speed initialized.");
 			mode = MODE_USB_HOST;
-    		//button_press = 0;
+    		button_press = 0;
     	}
 #endif
 
+#ifdef USE_USB_HOST
     	if (usb_host_connected_flag){
     		printf("\r\n** A USB device was connected. **");
     		if (HCD_IsDeviceConnected(&USB_OTG_Core)){
@@ -261,7 +258,7 @@ int main()
     					TM_FATFS_USBDriveSize(&total, &free);
     					/* Put data */
     					f_printf(&USB_Fil,"This is my first file with USB and FatFS\n");
-    					f_printf(&USB_Fil,"with USB MSC HOST library from stm32f4-discovery.com\n");
+    					f_printf(&USB_Fil,"with USB MSC HOST library from ST\n");
     					f_printf(&USB_Fil,"USB total and free space:\n");
     					/* Total space */
     					f_printf(&USB_Fil,"Total: %8lu kB; %5lu MB; %2lu GB\n", total, total / 1024, total / 1048576);
@@ -288,7 +285,7 @@ int main()
     		USB_Host.class_cb->DeInit(&USB_OTG_Core, &USB_Host.device_prop);
     		usb_host_disconnected_flag = 0;
     	}
-
+#endif
     	if (one_second_flag){
     		/* Toogle LED */
     		GPIO_ToggleBits(LED1_PORT,LED1);
@@ -305,7 +302,7 @@ int main()
     		/* Reset flag */
     		one_second_flag = 0;
     	} // end one_second_flag
-#if 0
+#if 1
     	if (button_press){
     		printf("\r\nButton press.");
     		if (mode == MODE_USB_DEVICE){
@@ -362,7 +359,7 @@ PUTCHAR_PROTOTYPE
   return ch;
 }
 
-
+#ifdef USE_USB_HOST
 void printdir(void){
 	FILINFO fno;
 	DIR dir;
@@ -397,3 +394,4 @@ void printdir(void){
     }
     printf("\r\n-------------------------------------");
 }
+#endif

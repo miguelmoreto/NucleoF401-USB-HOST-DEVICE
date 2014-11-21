@@ -181,15 +181,15 @@ void OTG_HS_IRQHandler(void)
 #ifdef USE_USB_OTG_FS
 void OTG_FS_IRQHandler(void)
 {
-  //USBD_OTG_ISR_Handler (&USB_OTG_dev);
-  if (USB_OTG_IsHostMode(&USB_OTG_Core)) /* ensure that we are in device mode */
-  {
-    USBH_OTG_ISR_Handler(&USB_OTG_Core);
-  }
-  else
-  {
-    USBD_OTG_ISR_Handler(&USB_OTG_Core);
-  }
+	//USBD_OTG_ISR_Handler (&USB_OTG_dev);
+	if (USB_OTG_IsHostMode(&USB_OTG_Core)) /* ensure that we are in device mode */
+	{
+		USBH_OTG_ISR_Handler(&USB_OTG_Core);
+	}
+	else
+	{
+		USBD_OTG_ISR_Handler(&USB_OTG_Core);
+	}
 }
 #endif
 

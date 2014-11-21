@@ -16,8 +16,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/TesteSDIO/USB/DRD/usbh_msc_usr.c"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:\Desenvolvimento\STM32\STM32NucleoF401\Projects\NucleoF401-SDIO\USB\DRD\usbh_msc_usr.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -36,8 +36,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/TesteSDIO/USB/HOST_lib/usbh_msc_scsi.c"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:\Desenvolvimento\STM32\STM32NucleoF401\Projects\NucleoF401-SDIO\USB\HOST_lib\usbh_msc_scsi.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 </marker>
 </breakpoint>
 </breakpoints>
