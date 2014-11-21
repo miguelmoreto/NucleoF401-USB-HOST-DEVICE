@@ -59,7 +59,7 @@ void MyConfigGPIO(void){
     GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IN;
     GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_NOPULL; // Nucleo board already have an pullup.
     GPIO_Init(USER_BTN_PORT, &GPIO_InitStructure);
-
+#if 0
     /* Connect EXTI Line12 to PC12 pin */
     SYSCFG_EXTILineConfig(EXTI_PortSourceGPIOC, EXTI_PinSource13);
     /* Configure EXTI Line12 */
@@ -75,6 +75,7 @@ void MyConfigGPIO(void){
     NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x0F;
     NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
     NVIC_Init(&NVIC_InitStructure);
+#endif
 #endif
 
 }
