@@ -221,12 +221,13 @@ void OTG_HS_EP1_OUT_IRQHandler(void)
   * @param  None
   * @retval None
   */
-void TIM2_IRQHandler(void)
+void TIM3_IRQHandler(void)
 {
   USB_OTG_BSP_TimerIRQ();
   //OS_INT_EXIT_EXT();
 }
 
+#if 0
 /**
   * TIM3 interrupt handler (configured to one second update).
   */ 
@@ -246,7 +247,7 @@ void TIM3_IRQHandler(){
 
 
 }
-
+#endif
 /**
   * @brief  This function handles External lines 15 to 10 interrupt request.
   * @param  None

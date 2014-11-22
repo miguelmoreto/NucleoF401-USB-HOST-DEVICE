@@ -43,6 +43,7 @@
   * @{
   */
 #define USE_ACCURATE_TIME
+/* Configured to work with TIM3. */
 #define TIM_MSEC_DELAY                     0x01
 #define TIM_USEC_DELAY                     0x02
 #define HOST_OVRCURR_PORT                  GPIOB
@@ -52,7 +53,6 @@
 #define HOST_OVRCURR_PORT_RCC              RCC_AHB1Periph_GPIOB
 #define HOST_OVRCURR_EXTI_LINE             EXTI_Line2
 #define HOST_OVRCURR_IRQn                  EXTI2_IRQn
-
 
  #define HOST_POWERSW_PORT_RCC             RCC_AHB1Periph_GPIOA
  #define HOST_POWERSW_PORT                 GPIOA
@@ -137,7 +137,7 @@ void USB_OTG_BSP_Init(USB_OTG_CORE_HANDLE *pdev)
   //GPIO_PinAFConfig(GPIOA,GPIO_PinSource8,GPIO_AF_OTG1_FS) ;
   GPIO_PinAFConfig(GPIOA,GPIO_PinSource11,GPIO_AF_OTG1_FS) ; 
   GPIO_PinAFConfig(GPIOA,GPIO_PinSource12,GPIO_AF_OTG1_FS) ;
-  
+#ifdef VBUS_SENSING_ENABLED
   /* Configure  VBUS Pin */
   GPIO_InitStructure.GPIO_Pin = GPIO_Pin_9;
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
@@ -145,7 +145,8 @@ void USB_OTG_BSP_Init(USB_OTG_CORE_HANDLE *pdev)
   GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
   GPIO_Init(GPIOA, &GPIO_InitStructure);    
-  
+#endif
+#if 1
   /* Configure ID pin */
   GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_10;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
@@ -153,7 +154,7 @@ void USB_OTG_BSP_Init(USB_OTG_CORE_HANDLE *pdev)
   GPIO_InitStructure.GPIO_Speed = GPIO_Speed_100MHz;
   GPIO_Init(GPIOA, &GPIO_InitStructure);  
   GPIO_PinAFConfig(GPIOA,GPIO_PinSource10,GPIO_AF_OTG1_FS) ;   
-
+#endif
 
   RCC_APB2PeriphClockCmd(RCC_APB2Periph_SYSCFG, ENABLE);
   RCC_AHB2PeriphClockCmd(RCC_AHB2Periph_OTG_FS, ENABLE) ; 
@@ -394,14 +395,14 @@ static void USB_OTG_BSP_TimeInit ( void )
   NVIC_PriorityGroupConfig(NVIC_PriorityGroup_2);
 
   /* Enable the TIM2 gloabal Interrupt */
-  NVIC_InitStructure.NVIC_IRQChannel = TIM2_IRQn;
+  NVIC_InitStructure.NVIC_IRQChannel = TIM3_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0;
   NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;
 
   NVIC_Init(&NVIC_InitStructure);
 
-  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2, ENABLE);
+  RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM3, ENABLE);
 
 }
 #endif
@@ -479,16 +480,16 @@ void USB_OTG_BSP_TimerIRQ (void)
 {
 #ifdef USE_ACCURATE_TIME
 
-  if (TIM_GetITStatus(TIM2, TIM_IT_Update) != RESET)
+  if (TIM_GetITStatus(TIM3, TIM_IT_Update) != RESET)
   {
-    TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+    TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
     if (BSP_delay > 0x00)
     {
       BSP_delay--;
     }
     else
     {
-      TIM_Cmd(TIM2,DISABLE);
+      TIM_Cmd(TIM3,DISABLE);
     }
   }
 #endif
@@ -508,7 +509,7 @@ static void BSP_Delay(uint32_t nTime, uint8_t unit)
   BSP_delay = nTime;
   BSP_SetTime(unit);
   while(BSP_delay != 0);
-  TIM_Cmd(TIM2,DISABLE);
+  TIM_Cmd(TIM3,DISABLE);
 }
 
 /**
@@ -521,8 +522,8 @@ static void BSP_SetTime(uint8_t unit)
 {
   TIM_TimeBaseInitTypeDef  TIM_TimeBaseStructure;
 
-  TIM_Cmd(TIM2,DISABLE);
-  TIM_ITConfig(TIM2, TIM_IT_Update, DISABLE);
+  TIM_Cmd(TIM3,DISABLE);
+  TIM_ITConfig(TIM3, TIM_IT_Update, DISABLE);
 
 
   if(unit == TIM_USEC_DELAY)
@@ -537,16 +538,16 @@ static void BSP_SetTime(uint8_t unit)
   TIM_TimeBaseStructure.TIM_ClockDivision = 0;
   TIM_TimeBaseStructure.TIM_CounterMode = TIM_CounterMode_Up;
 
-  TIM_TimeBaseInit(TIM2, &TIM_TimeBaseStructure);
-  TIM_ClearITPendingBit(TIM2, TIM_IT_Update);
+  TIM_TimeBaseInit(TIM3, &TIM_TimeBaseStructure);
+  TIM_ClearITPendingBit(TIM3, TIM_IT_Update);
 
-  TIM_ARRPreloadConfig(TIM2, ENABLE);
+  TIM_ARRPreloadConfig(TIM3, ENABLE);
 
   /* TIM IT enable */
-  TIM_ITConfig(TIM2, TIM_IT_Update, ENABLE);
+  TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);
 
   /* TIM2 enable counter */
-  TIM_Cmd(TIM2, ENABLE);
+  TIM_Cmd(TIM3, ENABLE);
 }
 
 #endif

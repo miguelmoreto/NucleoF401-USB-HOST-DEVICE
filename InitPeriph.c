@@ -9,7 +9,7 @@
 
 
 void MyConfigTimers(void){
-
+#if 0
     TIM_TimeBaseInitTypeDef TIM_TimeBaseStructure;
     NVIC_InitTypeDef NVIC_InitStructure;
 
@@ -33,7 +33,7 @@ void MyConfigTimers(void){
     TIM_ITConfig(TIM3, TIM_IT_Update, ENABLE);
     /* TIM3 enable counter */
     TIM_Cmd(TIM3, ENABLE);
-
+#endif
 }
 
 void MyConfigGPIO(void){
@@ -117,5 +117,28 @@ void MyConfigUSART(void){
 	USART_Init(USART2, &USART_InitStructure);
 	/* Enable USART */
 	USART_Cmd(USART2, ENABLE);
+#if 0
+	RCC_APB2PeriphClockCmd(RCC_APB2Periph_USART1, ENABLE);
+	RCC_AHB1PeriphClockCmd(RCC_AHB1Periph_GPIOB, ENABLE);
+	/* Connect PA9 to USART1_Tx*/
+	GPIO_PinAFConfig(GPIOB,GPIO_PinSource6,GPIO_AF_USART1);
+	/* Connect PA10 to USART1_Rx*/
+	GPIO_PinAFConfig(GPIOB,GPIO_PinSource7,GPIO_AF_USART1);
 
+	/* Configure USART Tx as alternate function  */
+	GPIO_InitStructure.GPIO_OType = GPIO_OType_PP;
+	GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_UP;
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_6;
+	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
+	GPIO_Init(GPIOB, &GPIO_InitStructure);
+	/* Configure USART Rx as alternate function  */
+	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_AF;
+	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_7;
+	GPIO_Init(GPIOB, &GPIO_InitStructure);
+	/* USART configuration */
+	USART_Init(USART1, &USART_InitStructure);
+	/* Enable USART */
+	USART_Cmd(USART1, ENABLE);
+#endif
 }

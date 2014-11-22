@@ -299,6 +299,11 @@ int main()
     					datatime.hours,
     					datatime.minutes,
     					datatime.seconds);
+			//USART_SendData(USART1, 'a');
+			/* Loop until the end of transmission */
+			//while (USART_GetFlagStatus(USART1, USART_FLAG_TC) == RESET)
+			//{}
+
     		/* Reset flag */
     		one_second_flag = 0;
     	} // end one_second_flag
