@@ -1,30 +1,38 @@
-/**
-  ******************************************************************************
-  * @file    usb_bsp.c
-  * @author  MCD Application Team
-  * @version V1.1.0
-  * @date    19-March-2012
-  * @brief   This file is responsible to offer board support package and is
-  *          configurable by user.
-  ******************************************************************************
-  * @attention
-  *
-  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
-  *
-  * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
-  * You may not use this file except in compliance with the License.
-  * You may obtain a copy of the License at:
-  *
-  *        http://www.st.com/software_license_agreement_liberty_v2
-  *
-  * Unless required by applicable law or agreed to in writing, software 
-  * distributed under the License is distributed on an "AS IS" BASIS, 
-  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  * See the License for the specific language governing permissions and
-  * limitations under the License.
-  *
-  ******************************************************************************
-  */ 
+/*
+ ******************************************************************************
+ * @file    usb_bsp.c
+ * @author  MCD Application Team
+ * @version V1.1.0
+ * @date    19-March-2012
+ * @brief   This file is responsible to offer board support package and is
+ *          configurable by user.
+ ******************************************************************************
+ * @attention
+ *
+ * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+ *
+ * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
+ * You may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at:
+ *
+ *        http://www.st.com/software_license_agreement_liberty_v2
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ *
+ ******************************************************************************
+ */
+
+/*
+ * Updated by Moreto to work with NucleoF401
+ *
+ * Using TIM3 for delay functions using the USE_ACCURATE_TIME definition.
+ * NucleoF401 USB MSC Host and Device Demo
+ *
+ */
 
 /* Includes ------------------------------------------------------------------*/
 #include "usb_bsp.h"
@@ -54,9 +62,10 @@
 #define HOST_OVRCURR_EXTI_LINE             EXTI_Line2
 #define HOST_OVRCURR_IRQn                  EXTI2_IRQn
 
- #define HOST_POWERSW_PORT_RCC             RCC_AHB1Periph_GPIOA
- #define HOST_POWERSW_PORT                 GPIOA
- #define HOST_POWERSW_VBUS                 GPIO_Pin_8
+/* Pin to control the external 5V switch of step up converter */
+#define HOST_POWERSW_PORT_RCC             RCC_AHB1Periph_GPIOA
+#define HOST_POWERSW_PORT                 GPIOA
+#define HOST_POWERSW_VBUS                 GPIO_Pin_8
 
 /** @defgroup USB_BSP_Private_TypesDefinitions
 * @{
@@ -64,10 +73,6 @@
 /**
 * @}
 */ 
-
-
-
-
 
 /** @defgroup USB_BSP_Private_Macros
 * @{
@@ -146,7 +151,7 @@ void USB_OTG_BSP_Init(USB_OTG_CORE_HANDLE *pdev)
   GPIO_InitStructure.GPIO_PuPd = GPIO_PuPd_DOWN;
   GPIO_Init(GPIOA, &GPIO_InitStructure);    
 #endif
-#if 1
+#if 0 // Not using ID pin.
   /* Configure ID pin */
   GPIO_InitStructure.GPIO_Pin =  GPIO_Pin_10;
   GPIO_InitStructure.GPIO_OType = GPIO_OType_OD;
@@ -256,14 +261,14 @@ void USB_OTG_BSP_Init(USB_OTG_CORE_HANDLE *pdev)
   #endif
  #endif //USB_OTG_HS
 #endif //USE_STM322xG_EVAL
-  /* Intialize Timer for delay function */
+  /* Initialize Timer for delay function */
 #ifdef USE_ACCURATE_TIME
   USB_OTG_BSP_TimeInit();
 #endif
 }
 /**
 * @brief  USB_OTG_BSP_EnableInterrupt
-*         Enabele USB Global interrupt
+*         Enable USB Global interrupt
 * @param  None
 * @retval None
 */
@@ -555,12 +560,5 @@ static void BSP_SetTime(uint8_t unit)
 * @}
 */ 
 
-/**
-* @}
-*/ 
-
-/**
-* @}
-*/
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

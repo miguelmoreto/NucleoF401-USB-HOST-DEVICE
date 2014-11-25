@@ -32,8 +32,6 @@
 /* Includes ------------------------------------------------------------------*/
 #include "usbd_msc_mem.h"
 #include "usb_conf.h"
-// #include "stm32f4_discovery.h"
-// #include "stm32f4_discovery_sdio_sd.h"
 
 /** @addtogroup STM32_USB_OTG_DEVICE_LIBRARY
   * @{
