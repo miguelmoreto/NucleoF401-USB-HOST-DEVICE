@@ -116,6 +116,52 @@ signed int PutUnsignedInt(
     return num;
 }
 
+#if 0
+/**
+ * @brief  Writes an unsigned int inside the given string, using the provided fill &
+ *         width parameters.
+ *
+ * @param  pStr  Storage string.
+ * @param  fill  Fill character.
+ * @param  width  Minimum integer width.
+ * @param  value  Integer value.
+ */
+signed int PutUnsignedLong(
+    char *pStr,
+    char fill,
+    signed int width,
+    unsigned long int value)
+{
+    signed int num = 0;
+
+    /* Take current digit into account when calculating width */
+    width--;
+
+    /* Recursively write upper digits */
+    if ((value / 10) > 0) {
+
+        num = PutUnsignedLong(pStr, fill, width, value / 10);
+        pStr += num;
+    }
+
+    /* Write filler characters */
+    else {
+
+        while (width > 0) {
+
+            PutChar(pStr, fill);
+            pStr++;
+            num++;
+            width--;
+        }
+    }
+
+    /* Write lower digit */
+    num += PutChar(pStr, (value % 10) + '0');
+
+    return num;
+}
+#endif
 
 /**
  * @brief  Writes a signed int inside the given string, using the provided fill & width
@@ -334,6 +380,7 @@ signed int vsnprintf(char *pStr, size_t length, const char *pFormat, va_list ap)
             case 'X': num = PutHexa(pStr, fill, width, 1, va_arg(ap, unsigned int)); break;
             case 's': num = PutString(pStr, va_arg(ap, char *)); break;
             case 'c': num = PutChar(pStr, va_arg(ap, unsigned int)); break;
+            //case 'L': num = PutUnsignedLong(pStr, fill, width, va_arg(ap, unsigned long int)); break;
             default:
                 return EOF;
             }

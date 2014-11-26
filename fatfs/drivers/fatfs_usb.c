@@ -15,15 +15,16 @@
  * | You should have received a copy of the GNU General Public License
  * | along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * |----------------------------------------------------------------------
+ * Modified by Moreto, 2014, as I'm not using TM USB host lib.
  */
 #include "usb_conf.h"
-#include "usbh_usr.h"
+#include "usbh_msc_usr.h"
 #include "fatfs_usb.h"
 #include "usbh_msc_core.h"
-#include "tm_stm32f4_usb_msc_host.h"
+//#include "tm_stm32f4_usb_msc_host.h"
 
 static volatile DSTATUS USB_Stat = STA_NOINIT;	/* Disk status */
-extern TM_USB_MSCHOST_Result_t 	TM_USB_MSCHOST_INT_Result;
+//extern TM_USB_MSCHOST_Result_t 	TM_USB_MSCHOST_INT_Result;
 
 extern USB_OTG_CORE_HANDLE   USB_OTG_Core;
 extern USBH_HOST             USB_Host;
@@ -32,7 +33,7 @@ extern USBH_HOST             USB_Host;
 /* Initialize USB                                                        */
 /*-----------------------------------------------------------------------*/
 DSTATUS TM_FATFS_USB_disk_initialize(void) {
-	if (HCD_IsDeviceConnected(&USB_OTG_Core) && TM_USB_MSCHOST_INT_Result == TM_USB_MSCHOST_Result_Connected) {
+	if (HCD_IsDeviceConnected(&USB_OTG_Core) && USBH_USR_MSC_IsReady()) {
 		USB_Stat &= ~STA_NOINIT;
 	} else {
 		USB_Stat |= STA_NOINIT;
@@ -66,7 +67,8 @@ DRESULT TM_FATFS_USB_disk_read (
 		return RES_NOTRDY;
 	}
 
-	if (HCD_IsDeviceConnected(&USB_OTG_Core) && TM_USB_MSCHOST_INT_Result == TM_USB_MSCHOST_Result_Connected) {
+	if (HCD_IsDeviceConnected(&USB_OTG_Core) && USBH_USR_MSC_IsReady()) {
+		//USBH_MSC_Init(&USB_OTG_Core);
 		do
 		{
 			status = USBH_MSC_Read10(&USB_OTG_Core, buff, sector, 512 * count);
@@ -101,11 +103,12 @@ DRESULT TM_FATFS_USB_disk_write (
 	if (USB_Stat & STA_NOINIT) {
 		return RES_NOTRDY;
 	}
-	if (TM_USB_MSCHOST_INT_Result == TM_USB_MSCHOST_Result_WriteProtected) {
-		return RES_WRPRT;
-	}
+//	if (TM_USB_MSCHOST_INT_Result == TM_USB_MSCHOST_Result_WriteProtected) {
+//		return RES_WRPRT;
+//	}
 
-	if (HCD_IsDeviceConnected(&USB_OTG_Core) && TM_USB_MSCHOST_INT_Result == TM_USB_MSCHOST_Result_Connected) {
+	if (HCD_IsDeviceConnected(&USB_OTG_Core) && USBH_USR_MSC_IsReady()) {
+		//USBH_MSC_Init(&USB_OTG_Core);
 		do
 		{
 			status = USBH_MSC_Write10(&USB_OTG_Core, (BYTE*)buff, sector, 512 * count);

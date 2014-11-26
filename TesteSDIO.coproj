@@ -34,7 +34,7 @@
           <Memory name="IROM2" type="ReadOnly" size="" startValue=""/>
           <Memory name="IRAM2" type="ReadWrite" size="" startValue=""/>
         </MemoryAreas>
-        <LocateLinkFile path="../../../../../coocox/coide/configuration/programdata/testesdio/arm-gcc-link.ld" type="0"/>
+        <LocateLinkFile path="c:/coocox/coide/configuration/programdata/testesdio/arm-gcc-link.ld" type="0"/>
       </Link>
       <Output>
         <Option name="OutputFileType" value="0"/>
@@ -87,103 +87,133 @@
     <Component id="526" name="SYSCFG" path="" type="2"/>
   </Components>
   <Files>
+    <File name="USB/OTG_driver/usb_hcd.c" path="USB/OTG_driver/usb_hcd.c" type="1"/>
+    <File name="USB/HOST_lib/usbh_msc_bot.c" path="USB/HOST_lib/usbh_msc_bot.c" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_usart.c" path="cmsis_lib/source/stm32f4xx_usart.c" type="1"/>
     <File name="fatfs/drivers" path="" type="2"/>
-    <File name="USB_lib_driver/usbd_desc.c" path="USB_lib_driver/usbd_desc.c" type="1"/>
-    <File name="USB_lib_driver/usbd_core.c" path="USB_lib_driver/usbd_core.c" type="1"/>
+    <File name="USB/HOST_lib/usbh_core.c" path="USB/HOST_lib/usbh_core.c" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_core.c" path="USB/DEVICE_lib/usbd_core.c" type="1"/>
     <File name="fatfs/integer.h" path="fatfs/integer.h" type="1"/>
     <File name="InitPeriph.c" path="InitPeriph.c" type="1"/>
-    <File name="USB_lib_driver/usbd_msc_scsi.c" path="USB_lib_driver/usbd_msc_scsi.c" type="1"/>
+    <File name="USB/DRD/usbd_conf.h" path="USB/DRD/usbd_conf.h" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_usart.h" path="cmsis_lib/include/stm32f4xx_usart.h" type="1"/>
-    <File name="USB_lib_driver/usbd_usr.c" path="USB_lib_driver/usbd_usr.c" type="1"/>
-    <File name="USB_lib_driver/usbd_msc_bot.h" path="USB_lib_driver/usbd_msc_bot.h" type="1"/>
-    <File name="USB_lib_driver/usbd_def.h" path="USB_lib_driver/usbd_def.h" type="1"/>
+    <File name="USB/HOST_lib/usbh_ioreq.h" path="USB/HOST_lib/usbh_ioreq.h" type="1"/>
+    <File name="USB/DRD/usbd_desc.c" path="USB/DRD/usbd_desc.c" type="1"/>
+    <File name="USB/OTG_driver/usb_core.h" path="USB/OTG_driver/usb_core.h" type="1"/>
     <File name="cmsis/core_cm4_simd.h" path="cmsis/core_cm4_simd.h" type="1"/>
     <File name="cmsis_boot/stm32f4xx.h" path="cmsis_boot/stm32f4xx.h" type="1"/>
     <File name="cmsis/core_cmFunc.h" path="cmsis/core_cmFunc.h" type="1"/>
-    <File name="USB_lib_driver/usb_core.c" path="USB_lib_driver/usb_core.c" type="1"/>
+    <File name="fatfs/drivers/fatfs_usb.h" path="fatfs/drivers/fatfs_usb.h" type="1"/>
+    <File name="USB/OTG_driver/usb_dcd.c" path="USB/OTG_driver/usb_dcd.c" type="1"/>
     <File name="stm32f4xx_it.c" path="stm32f4xx_it.c" type="1"/>
     <File name="syscalls/syscalls.c" path="syscalls/syscalls.c" type="1"/>
     <File name="fatfs/ff.c" path="fatfs/ff.c" type="1"/>
     <File name="tm_stm32f4_rtc.h" path="tm_stm32f4_rtc.h" type="1"/>
-    <File name="USB_lib_driver/usb_core.h" path="USB_lib_driver/usb_core.h" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_usr.h" path="USB/DEVICE_lib/usbd_usr.h" type="1"/>
+    <File name="USB/DRD/usb_conf.h" path="USB/DRD/usb_conf.h" type="1"/>
+    <File name="USB/OTG_driver/usb_dcd.h" path="USB/OTG_driver/usb_dcd.h" type="1"/>
+    <File name="USB/OTG_driver/usb_defines.h" path="USB/OTG_driver/usb_defines.h" type="1"/>
+    <File name="USB/OTG_driver/usb_core.c" path="USB/OTG_driver/usb_core.c" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_msc_data.h" path="USB/DEVICE_lib/usbd_msc_data.h" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_core.h" path="USB/DEVICE_lib/usbd_core.h" type="1"/>
+    <File name="USB/HOST_lib/usbh_ioreq.c" path="USB/HOST_lib/usbh_ioreq.c" type="1"/>
+    <File name="USB/HOST_lib/usbh_msc_scsi.c" path="USB/HOST_lib/usbh_msc_scsi.c" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_rtc.c" path="cmsis_lib/source/stm32f4xx_rtc.c" type="1"/>
     <File name="stdio/printf.c" path="stdio/printf.c" type="1"/>
+    <File name="USB" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_rcc.h" path="cmsis_lib/include/stm32f4xx_rcc.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_syscfg.c" path="cmsis_lib/source/stm32f4xx_syscfg.c" type="1"/>
+    <File name="USB/DRD/usbh_msc_usr.c" path="USB/DRD/usbh_msc_usr.c" type="1"/>
+    <File name="fatfs/drivers/fatfs_usb.c" path="fatfs/drivers/fatfs_usb.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_pwr.h" path="cmsis_lib/include/stm32f4xx_pwr.h" type="1"/>
     <File name="fatfs/option/unicode.c" path="fatfs/option/unicode.c" type="1"/>
     <File name="stdio" path="" type="2"/>
     <File name="cmsis_boot/startup/startup_stm32f4xx.c" path="cmsis_boot/startup/startup_stm32f4xx.c" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_rcc.c" path="cmsis_lib/source/stm32f4xx_rcc.c" type="1"/>
     <File name="cmsis/core_cmInstr.h" path="cmsis/core_cmInstr.h" type="1"/>
-    <File name="USB_lib_driver/usb_regs.h" path="USB_lib_driver/usb_regs.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_pwr.c" path="cmsis_lib/source/stm32f4xx_pwr.c" type="1"/>
-    <File name="USB_lib_driver/usb_defines.h" path="USB_lib_driver/usb_defines.h" type="1"/>
     <File name="fatfs/diskio.c" path="fatfs/diskio.c" type="1"/>
+    <File name="USB/HOST_lib/usbh_stdreq.c" path="USB/HOST_lib/usbh_stdreq.c" type="1"/>
     <File name="cmsis_boot/system_stm32f4xx.c" path="cmsis_boot/system_stm32f4xx.c" type="1"/>
-    <File name="USB_lib_driver/usbd_conf.h" path="USB_lib_driver/usbd_conf.h" type="1"/>
-    <File name="USB_lib_driver/usbd_req.h" path="USB_lib_driver/usbd_req.h" type="1"/>
+    <File name="USB/DRD" path="" type="2"/>
+    <File name="USB/DEVICE_lib/usbd_req.h" path="USB/DEVICE_lib/usbd_req.h" type="1"/>
+    <File name="USB/OTG_driver/usb_bsp.h" path="USB/OTG_driver/usb_bsp.h" type="1"/>
     <File name="cmsis" path="" type="2"/>
-    <File name="USB_lib_driver/usbd_usr.h" path="USB_lib_driver/usbd_usr.h" type="1"/>
-    <File name="USB_lib_driver/usbd_msc_scsi.h" path="USB_lib_driver/usbd_msc_scsi.h" type="1"/>
     <File name="cmsis_lib" path="" type="2"/>
+    <File name="USB/DEVICE_lib/usbd_req.c" path="USB/DEVICE_lib/usbd_req.c" type="1"/>
+    <File name="USB/HOST_lib/usbh_core.h" path="USB/HOST_lib/usbh_core.h" type="1"/>
+    <File name="USB/DRD/usbd_storage_msd.c" path="USB/DRD/usbd_storage_msd.c" type="1"/>
+    <File name="USB/HOST_lib/usbh_msc_bot.h" path="USB/HOST_lib/usbh_msc_bot.h" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_rtc.h" path="cmsis_lib/include/stm32f4xx_rtc.h" type="1"/>
-    <File name="USB_lib_driver/usbd_msc_bot.c" path="USB_lib_driver/usbd_msc_bot.c" type="1"/>
     <File name="cmsis_lib/include/misc.h" path="cmsis_lib/include/misc.h" type="1"/>
-    <File name="USB_lib_driver/usbd_msc_core.c" path="USB_lib_driver/usbd_msc_core.c" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_ioreq.h" path="USB/DEVICE_lib/usbd_ioreq.h" type="1"/>
+    <File name="USB/HOST_lib/usbh_def.h" path="USB/HOST_lib/usbh_def.h" type="1"/>
     <File name="fatfs/option/syscall.c" path="fatfs/option/syscall.c" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_msc_mem.h" path="USB/DEVICE_lib/usbd_msc_mem.h" type="1"/>
     <File name="defines.h" path="defines.h" type="1"/>
+    <File name="USB/OTG_driver/usb_hcd_int.c" path="USB/OTG_driver/usb_hcd_int.c" type="1"/>
+    <File name="USB/HOST_lib/usbh_stdreq.h" path="USB/HOST_lib/usbh_stdreq.h" type="1"/>
     <File name="main.c" path="main.c" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_def.h" path="USB/DEVICE_lib/usbd_def.h" type="1"/>
+    <File name="USB/DRD/usbd_desc.h" path="USB/DRD/usbd_desc.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_gpio.c" path="cmsis_lib/source/stm32f4xx_gpio.c" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_dma.c" path="cmsis_lib/source/stm32f4xx_dma.c" type="1"/>
-    <File name="USB_lib_driver/usb_dcd_int.h" path="USB_lib_driver/usb_dcd_int.h" type="1"/>
-    <File name="USB_lib_driver/usbd_req.c" path="USB_lib_driver/usbd_req.c" type="1"/>
+    <File name="USB/DEVICE_lib" path="" type="2"/>
     <File name="fatfs/drivers/fatfs_sd_sdio.h" path="fatfs/drivers/fatfs_sd_sdio.h" type="1"/>
     <File name="fatfs/diskio.h" path="fatfs/diskio.h" type="1"/>
     <File name="cmsis_boot" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_syscfg.h" path="cmsis_lib/include/stm32f4xx_syscfg.h" type="1"/>
-    <File name="USB_lib_driver/usbd_msc_mem.h" path="USB_lib_driver/usbd_msc_mem.h" type="1"/>
+    <File name="USB/DRD/usb_bsp.c" path="USB/DRD/usb_bsp.c" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_msc_core.h" path="USB/DEVICE_lib/usbd_msc_core.h" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_msc_bot.c" path="USB/DEVICE_lib/usbd_msc_bot.c" type="1"/>
     <File name="fatfs/drivers/fatfs_sd_sdio.c" path="fatfs/drivers/fatfs_sd_sdio.c" type="1"/>
+    <File name="USB/OTG_driver/usb_regs.h" path="USB/OTG_driver/usb_regs.h" type="1"/>
     <File name="fatfs" path="" type="2"/>
     <File name="cmsis_boot/startup" path="" type="2"/>
+    <File name="USB/HOST_lib/usbh_hcs.h" path="USB/HOST_lib/usbh_hcs.h" type="1"/>
     <File name="cmsis/core_cm4.h" path="cmsis/core_cm4.h" type="1"/>
     <File name="tm_stm32f4_fatfs.c" path="tm_stm32f4_fatfs.c" type="1"/>
-    <File name="USB_lib_driver/usbd_msc_core.h" path="USB_lib_driver/usbd_msc_core.h" type="1"/>
+    <File name="USB/DRD/usbh_conf.h" path="USB/DRD/usbh_conf.h" type="1"/>
+    <File name="USB/OTG_driver/usb_hcd_int.h" path="USB/OTG_driver/usb_hcd_int.h" type="1"/>
     <File name="cmsis_lib/source/misc.c" path="cmsis_lib/source/misc.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_tim.h" path="cmsis_lib/include/stm32f4xx_tim.h" type="1"/>
+    <File name="USB/DRD/usbd_usr.c" path="USB/DRD/usbd_usr.c" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_ioreq.c" path="USB/DEVICE_lib/usbd_ioreq.c" type="1"/>
     <File name="cmsis_lib/source" path="" type="2"/>
-    <File name="USB_lib_driver/usbd_storage_msd.c" path="USB_lib_driver/usbd_storage_msd.c" type="1"/>
+    <File name="USB/HOST_lib/usbh_hcs.c" path="USB/HOST_lib/usbh_hcs.c" type="1"/>
     <File name="cmsis_boot/stm32f4xx_conf.h" path="cmsis_boot/stm32f4xx_conf.h" type="1"/>
     <File name="cmsis_boot/system_stm32f4xx.h" path="cmsis_boot/system_stm32f4xx.h" type="1"/>
-    <File name="USB_lib_driver/usb_bsp.h" path="USB_lib_driver/usb_bsp.h" type="1"/>
-    <File name="USB_lib_driver/usb_dcd_int.c" path="USB_lib_driver/usb_dcd_int.c" type="1"/>
-    <File name="USB_lib_driver/usbd_desc.h" path="USB_lib_driver/usbd_desc.h" type="1"/>
+    <File name="USB/OTG_driver/usb_otg.c" path="USB/OTG_driver/usb_otg.c" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_msc_bot.h" path="USB/DEVICE_lib/usbd_msc_bot.h" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_msc_core.c" path="USB/DEVICE_lib/usbd_msc_core.c" type="1"/>
     <File name="stm32f4xx_it.h" path="stm32f4xx_it.h" type="1"/>
-    <File name="USB_lib_driver" path="" type="2"/>
-    <File name="USB_lib_driver/usbd_ioreq.c" path="USB_lib_driver/usbd_ioreq.c" type="1"/>
-    <File name="USB_lib_driver/usbd_msc_data.c" path="USB_lib_driver/usbd_msc_data.c" type="1"/>
-    <File name="USB_lib_driver/usb_dcd.c" path="USB_lib_driver/usb_dcd.c" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_msc_data.c" path="USB/DEVICE_lib/usbd_msc_data.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_sdio.h" path="cmsis_lib/include/stm32f4xx_sdio.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_sdio.c" path="cmsis_lib/source/stm32f4xx_sdio.c" type="1"/>
-    <File name="USB_lib_driver/usb_conf.h" path="USB_lib_driver/usb_conf.h" type="1"/>
     <File name="fatfs/ff.h" path="fatfs/ff.h" type="1"/>
+    <File name="USB/OTG_driver/usb_dcd_int.h" path="USB/OTG_driver/usb_dcd_int.h" type="1"/>
+    <File name="USB/HOST_lib/usbh_msc_core.c" path="USB/HOST_lib/usbh_msc_core.c" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_exti.c" path="cmsis_lib/source/stm32f4xx_exti.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_exti.h" path="cmsis_lib/include/stm32f4xx_exti.h" type="1"/>
-    <File name="USB_lib_driver/usbd_msc_data.h" path="USB_lib_driver/usbd_msc_data.h" type="1"/>
-    <File name="fatfs/option" path="" type="2"/>
+    <File name="USB/DEVICE_lib/usbd_msc_scsi.h" path="USB/DEVICE_lib/usbd_msc_scsi.h" type="1"/>
+    <File name="USB/OTG_driver/usb_otg.h" path="USB/OTG_driver/usb_otg.h" type="1"/>
+    <File name="USB/HOST_lib/usbh_msc_scsi.h" path="USB/HOST_lib/usbh_msc_scsi.h" type="1"/>
     <File name="tm_stm32f4_rtc.c" path="tm_stm32f4_rtc.c" type="1"/>
-    <File name="USB_lib_driver/usbd_ioreq.h" path="USB_lib_driver/usbd_ioreq.h" type="1"/>
+    <File name="fatfs/option" path="" type="2"/>
+    <File name="USB/OTG_driver" path="" type="2"/>
     <File name="cmsis_lib/include/stm32f4xx_dma.h" path="cmsis_lib/include/stm32f4xx_dma.h" type="1"/>
     <File name="cmsis_lib/source/stm32f4xx_tim.c" path="cmsis_lib/source/stm32f4xx_tim.c" type="1"/>
+    <File name="USB/DRD/usbh_msc_usr.h" path="USB/DRD/usbh_msc_usr.h" type="1"/>
+    <File name="USB/OTG_driver/usb_dcd_int.c" path="USB/OTG_driver/usb_dcd_int.c" type="1"/>
     <File name="cmsis_lib/include/stm32f4xx_gpio.h" path="cmsis_lib/include/stm32f4xx_gpio.h" type="1"/>
-    <File name="USB_lib_driver/usb_bsp.c" path="USB_lib_driver/usb_bsp.c" type="1"/>
+    <File name="USB/DEVICE_lib/usbd_msc_scsi.c" path="USB/DEVICE_lib/usbd_msc_scsi.c" type="1"/>
     <File name="syscalls" path="" type="2"/>
     <File name="fatfs/ffconf.h" path="fatfs/ffconf.h" type="1"/>
-    <File name="USB_lib_driver/usbd_core.h" path="USB_lib_driver/usbd_core.h" type="1"/>
+    <File name="USB/OTG_driver/usb_hcd.h" path="USB/OTG_driver/usb_hcd.h" type="1"/>
     <File name="cmsis_lib/include" path="" type="2"/>
     <File name="tm_stm32f4_fatfs.h" path="tm_stm32f4_fatfs.h" type="1"/>
-    <File name="USB_lib_driver/usb_dcd.h" path="USB_lib_driver/usb_dcd.h" type="1"/>
+    <File name="USB/HOST_lib" path="" type="2"/>
     <File name="InitPeriph.h" path="InitPeriph.h" type="1"/>
+    <File name="USB/HOST_lib/usbh_msc_core.h" path="USB/HOST_lib/usbh_msc_core.h" type="1"/>
   </Files>
 </Project>

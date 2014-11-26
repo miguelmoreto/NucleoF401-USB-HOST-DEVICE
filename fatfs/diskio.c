@@ -9,6 +9,7 @@
 
 #include "diskio.h"		/* FatFs lower layer API */
 #include "ff.h"
+#include "tm_stm32f4_rtc.h"
 
 /* Not USB in use */
 /* Define it in defines.h project file if you want to use USB */
@@ -224,13 +225,17 @@ DRESULT disk_ioctl (
 #endif
 
 DWORD __weak get_fattime(void) {
+
+	TM_RTC_Time_t datatime;
+	TM_RTC_GetDateTime(&datatime, TM_RTC_Format_BIN);
+
 	/* Returns current time packed into a DWORD variable */
-	return	  ((DWORD)(2013 - 1980) << 25)	/* Year 2013 */
-			| ((DWORD)7 << 21)				/* Month 7 */
-			| ((DWORD)28 << 16)				/* Mday 28 */
-			| ((DWORD)0 << 11)				/* Hour 0 */
-			| ((DWORD)0 << 5)				/* Min 0 */
-			| ((DWORD)0 >> 1);				/* Sec 0 */
+	return	  ((DWORD)(datatime.year + 2000 - 1980) << 25)	/* Year 2013 */
+			| ((DWORD)datatime.month << 21)				/* Month 7 */
+			| ((DWORD)datatime.date << 16)				/* Mday 28 */
+			| ((DWORD)datatime.hours << 11)				/* Hour 0 */
+			| ((DWORD)datatime.minutes << 5)			/* Min 0 */
+			| ((DWORD)datatime.seconds >> 1);			/* Sec 0 */
 }
 
 
