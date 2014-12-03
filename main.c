@@ -2,7 +2,7 @@
  * main.c
  *
  * main.c
- * ucleoF401 USB MSC Host and Device Demo main file.
+ * NucleoF401 USB MSC Host and Device Demo main file.
  *
  * Copyright 2014 Moreto
  *
@@ -21,7 +21,8 @@
  * Please consult the GNU General Public License at http://www.gnu.org/licenses/.
  *
  ************************************************************
- * Coocox project for ST NUCLEO-F401RE board with STM32F401RE controller.
+ * NucleoF401 USB MSC Host and Device Demo Coocox project for 
+ * ST NUCLEO-F401RE board with STM32F401RE controller.
  *
  * Clock is configured as:
  *   External 8MHz from STLINK V2.
@@ -91,12 +92,12 @@
  * or SPI (check how to configure this in TM lib fatfs sdcard lib).
  *
  * In DEMO_USB_BOTH the demo starts in USB HOST mode and when the user
- * press the button, it changes to DEVICE mode and keeps traped in a loop
+ * press the button, it changes to DEVICE mode and keeps trapped in a loop
  * until the user press the button. In this case the USB changes back to
  * HOST mode. Another press in the button and it will goes back to DEVICE
  * and so on.
  *
- * Miguel Moreto
+ * Moreto
  * Florianopolis - Brazil - 2014
  */
 #include "stm32f4xx.h"
