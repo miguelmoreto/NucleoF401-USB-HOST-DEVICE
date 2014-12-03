@@ -16,8 +16,8 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/TesteSDIO/USB/DRD/usbh_msc_usr.c"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:\Desenvolvimento\STM32\STM32NucleoF401\Projects\NucleoF401-SDIO\USB\DRD\usbh_msc_usr.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 <breakpoint enabled="true" persistant="true" registered="true">
@@ -36,86 +36,6 @@
 <attrib name="registered" value="true"/>
 <attrib name="path" value="/TesteSDIO/USB/HOST_lib/usbh_msc_scsi.c"/>
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:\Desenvolvimento\STM32\STM32NucleoF401\Projects\NucleoF401-SDIO\USB\HOST_lib\usbh_msc_scsi.c"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
-</marker>
-</breakpoint>
-<breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/TesteSDIO" type="4"/>
-<marker lineNumber="415" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
-<attrib name="enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
-<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
-<attrib name="workingset_name" value=""/>
-<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
-<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
-<attrib name="persistant" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
-<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
-<attrib name="message" value="Line breakpoint: usbh_msc_usr.c [line: 415]"/>
-<attrib name="registered" value="true"/>
-<attrib name="path" value="/TesteSDIO"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbh_msc_usr.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
-</marker>
-</breakpoint>
-<breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/TesteSDIO" type="4"/>
-<marker lineNumber="488" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
-<attrib name="enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
-<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
-<attrib name="workingset_name" value=""/>
-<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
-<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
-<attrib name="persistant" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
-<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
-<attrib name="message" value="Line breakpoint: usbh_msc_scsi.c [line: 488]"/>
-<attrib name="registered" value="true"/>
-<attrib name="path" value="/TesteSDIO"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/HOST_lib/usbh_msc_scsi.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
-</marker>
-</breakpoint>
-<breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/TesteSDIO" type="4"/>
-<marker lineNumber="415" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
-<attrib name="enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
-<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
-<attrib name="workingset_name" value=""/>
-<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
-<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
-<attrib name="persistant" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
-<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
-<attrib name="message" value="Line breakpoint: usbh_msc_usr.c [line: 415]"/>
-<attrib name="registered" value="true"/>
-<attrib name="path" value="/TesteSDIO"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbh_msc_usr.c"/>
-<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
-<attrib name="org.eclipse.debug.core.enabled" value="true"/>
-</marker>
-</breakpoint>
-<breakpoint enabled="true" persistant="true" registered="true">
-<resource path="/TesteSDIO" type="4"/>
-<marker lineNumber="488" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
-<attrib name="enabled" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
-<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
-<attrib name="workingset_name" value=""/>
-<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
-<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
-<attrib name="persistant" value="true"/>
-<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
-<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
-<attrib name="message" value="Line breakpoint: usbh_msc_scsi.c [line: 488]"/>
-<attrib name="registered" value="true"/>
-<attrib name="path" value="/TesteSDIO"/>
-<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/HOST_lib/usbh_msc_scsi.c"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
@@ -158,6 +78,86 @@
 <attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/HOST_lib/usbh_msc_scsi.c"/>
 <attrib name="org.eclipse.debug.core.enabled" value="true"/>
 <attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/TesteSDIO" type="4"/>
+<marker lineNumber="415" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
+<attrib name="enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
+<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
+<attrib name="persistant" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+<attrib name="message" value="Line breakpoint: usbh_msc_usr.c [line: 415]"/>
+<attrib name="registered" value="true"/>
+<attrib name="path" value="/TesteSDIO"/>
+<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbh_msc_usr.c"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/TesteSDIO" type="4"/>
+<marker lineNumber="488" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
+<attrib name="enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
+<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
+<attrib name="persistant" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+<attrib name="message" value="Line breakpoint: usbh_msc_scsi.c [line: 488]"/>
+<attrib name="registered" value="true"/>
+<attrib name="path" value="/TesteSDIO"/>
+<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/HOST_lib/usbh_msc_scsi.c"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/TesteSDIO" type="4"/>
+<marker lineNumber="415" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
+<attrib name="enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
+<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
+<attrib name="persistant" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+<attrib name="message" value="Line breakpoint: usbh_msc_usr.c [line: 415]"/>
+<attrib name="registered" value="true"/>
+<attrib name="path" value="/TesteSDIO"/>
+<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbh_msc_usr.c"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
+</marker>
+</breakpoint>
+<breakpoint enabled="true" persistant="true" registered="true">
+<resource path="/TesteSDIO" type="4"/>
+<marker lineNumber="488" type="org.eclipse.cdt.debug.core.cLineBreakpointMarker">
+<attrib name="enabled" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.condition" value=""/>
+<attrib name="org.eclipse.debug.core.id" value="org.eclipse.cdt.debug.core"/>
+<attrib name="workingset_name" value=""/>
+<attrib name="org.eclipse.cdt.debug.core.installCount" value="0"/>
+<attrib name="type" value="org.eclipse.cdt.debug.core.cLineBreakpointMarker"/>
+<attrib name="persistant" value="true"/>
+<attrib name="org.eclipse.cdt.debug.core.breakpointType" value="0"/>
+<attrib name="workingset_id" value="org.eclipse.debug.ui.breakpointWorkingSet"/>
+<attrib name="message" value="Line breakpoint: usbh_msc_scsi.c [line: 488]"/>
+<attrib name="registered" value="true"/>
+<attrib name="path" value="/TesteSDIO"/>
+<attrib name="org.eclipse.cdt.debug.core.sourceHandle" value="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/HOST_lib/usbh_msc_scsi.c"/>
+<attrib name="org.eclipse.cdt.debug.core.ignoreCount" value="0"/>
+<attrib name="org.eclipse.debug.core.enabled" value="true"/>
 </marker>
 </breakpoint>
 </breakpoints>

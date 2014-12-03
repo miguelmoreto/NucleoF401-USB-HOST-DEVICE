@@ -17,13 +17,16 @@
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-USB-HOST/nucleof401-sdio/main.c" title="main.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-USB-HOST/nucleof401-sdio/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/main.c" title="main.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3571" selectionTopPixel="855"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="8176" selectionTopPixel="3285"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="InitPeriph.h" partName="InitPeriph.h" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-USB-HOST/nucleof401-sdio/InitPeriph.h" title="InitPeriph.h" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-USB-HOST/nucleof401-sdio/InitPeriph.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/InitPeriph.h"/>
@@ -48,6 +51,18 @@
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="fatfs_sd_sdio.c" partName="fatfs_sd_sdio.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-USB-HOST/nucleof401-sdio/fatfs/drivers/fatfs_sd_sdio.c" title="fatfs_sd_sdio.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-USB-HOST/nucleof401-sdio/fatfs/drivers/fatfs_sd_sdio.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/fatfs/drivers/fatfs_sd_sdio.c"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="4950"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_desc.c" partName="usbd_desc.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbd_desc.c" title="usbd_desc.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbd_desc.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/USB/DRD/usbd_desc.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="76" selectionOffset="1968" selectionTopPixel="750"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_req.c" partName="usbd_req.c" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DEVICE_lib/usbd_req.c" title="usbd_req.c" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DEVICE_lib/usbd_req.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/USB/DEVICE_lib/usbd_req.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="67" selectionOffset="20053" selectionTopPixel="12030"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_desc.h" partName="usbd_desc.h" path="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbd_desc.h" title="usbd_desc.h" tooltip="D:/Desenvolvimento/STM32/STM32NucleoF401/Projects/NucleoF401-SDIO/USB/DRD/usbd_desc.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TesteSDIO/USB/DRD/usbd_desc.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="12" selectionOffset="2285" selectionTopPixel="975"/>
 </editor>
 </editors>
 <views>
@@ -264,8 +279,6 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/InitPeriph.c"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/InitPeriph.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/USB/DRD/usb_bsp.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/main.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/InitPeriph.c"/>
@@ -283,156 +296,158 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/USB/DRD/usbd_storage_msd.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/USB/DRD/usbd_usr.c"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/fatfs/drivers/fatfs_sd_sdio.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/USB/DRD/usbd_desc.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/TesteSDIO/USB/DEVICE_lib/usbd_req.c"/>
 </editors>
-<item historyLabel="InitPeriph.c" index="0">
-<position info="not_deleted" x="4" y="833"/>
-</item>
-<item historyLabel="InitPeriph.h" index="1">
-<position info="not_deleted" x="72" y="0"/>
-</item>
-<item historyLabel="InitPeriph.c" index="0">
-<position info="not_deleted" x="72" y="0"/>
-</item>
-<item historyLabel="InitPeriph.h" index="1">
-<position info="not_deleted" x="72" y="0"/>
-</item>
-<item historyLabel="InitPeriph.c" index="0">
-<position info="not_deleted" x="72" y="0"/>
-</item>
-<item historyLabel="usb_bsp.c" index="2">
-<position info="not_deleted" x="1206" y="0"/>
-</item>
-<item historyLabel="InitPeriph.h" index="1">
-<position info="not_deleted" x="182" y="39"/>
-</item>
-<item historyLabel="InitPeriph.c" index="0">
-<position info="not_deleted" x="770" y="0"/>
-</item>
-<item historyLabel="usb_bsp.c" index="2">
-<position info="not_deleted" x="16347" y="0"/>
-</item>
-<item historyLabel="InitPeriph.h" index="1">
-<position info="not_deleted" x="182" y="39"/>
-</item>
-<item historyLabel="main.c" index="3">
-<position info="not_deleted" x="142" y="0"/>
-</item>
-<item historyLabel="InitPeriph.h" index="1">
-<position info="not_deleted" x="172" y="0"/>
-</item>
-<item historyLabel="InitPeriph.c" index="4">
+<item historyLabel="InitPeriph.c" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="system_stm32f4xx.c" index="5">
+<item historyLabel="system_stm32f4xx.c" index="3">
 <position info="not_deleted" x="14093" y="0"/>
 </item>
-<item historyLabel="InitPeriph.c" index="4">
+<item historyLabel="InitPeriph.c" index="2">
 <position info="not_deleted" x="172" y="0"/>
 </item>
-<item historyLabel="usb_bsp.c" index="2">
+<item historyLabel="usb_bsp.c" index="0">
 <position info="not_deleted" x="16347" y="0"/>
 </item>
-<item historyLabel="usb_conf.h" index="6">
+<item historyLabel="usb_conf.h" index="4">
 <position info="not_deleted" x="7834" y="0"/>
 </item>
-<item historyLabel="usb_bsp.c" index="2">
+<item historyLabel="usb_bsp.c" index="0">
 <position info="not_deleted" x="16347" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_conf.h" index="7">
+<item historyLabel="stm32f4xx_conf.h" index="5">
 <position info="not_deleted" x="1723" y="0"/>
 </item>
-<item historyLabel="usb_bsp.c" index="2">
+<item historyLabel="usb_bsp.c" index="0">
 <position info="not_deleted" x="16347" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="2424" y="0"/>
 </item>
-<item historyLabel="usbd_storage_msd.c" index="8">
+<item historyLabel="usbd_storage_msd.c" index="6">
 <position info="not_deleted" x="4785" y="0"/>
 </item>
-<item historyLabel="fatfs_sd_sdio.c" index="9">
+<item historyLabel="fatfs_sd_sdio.c" index="7">
 <position info="not_deleted" x="20387" y="12"/>
 </item>
-<item historyLabel="usbd_storage_msd.c" index="8">
+<item historyLabel="usbd_storage_msd.c" index="6">
 <position info="not_deleted" x="4785" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="2424" y="0"/>
 </item>
-<item historyLabel="stm32f4xx.h" index="10">
+<item historyLabel="stm32f4xx.h" index="8">
 <position info="not_deleted" x="3243" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="8479" y="0"/>
 </item>
-<item historyLabel="InitPeriph.c" index="11">
+<item historyLabel="InitPeriph.c" index="9">
 <position info="not_deleted" x="172" y="0"/>
 </item>
-<item historyLabel="InitPeriph.c" index="11">
+<item historyLabel="InitPeriph.c" index="9">
 <position info="not_deleted" x="1931" y="12"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="7576" y="0"/>
 </item>
-<item historyLabel="usbd_core.c" index="12">
+<item historyLabel="usbd_core.c" index="10">
 <position info="not_deleted" x="3434" y="9"/>
 </item>
-<item historyLabel="usb_bsp.c" index="13">
+<item historyLabel="usb_bsp.c" index="11">
 <position info="not_deleted" x="16347" y="0"/>
 </item>
-<item historyLabel="usb_bsp.c" index="13">
+<item historyLabel="usb_bsp.c" index="11">
 <position info="not_deleted" x="3227" y="16"/>
 </item>
-<item historyLabel="usbd_core.c" index="12">
+<item historyLabel="usbd_core.c" index="10">
 <position info="not_deleted" x="3706" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="0" y="903"/>
 </item>
-<item historyLabel="stm32f4xx_it.c" index="14">
+<item historyLabel="stm32f4xx_it.c" index="12">
 <position info="not_deleted" x="1118" y="0"/>
 </item>
-<item historyLabel="usb_bsp.c" index="13">
+<item historyLabel="usb_bsp.c" index="11">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="tm_stm32f4_rtc.c" index="15">
+<item historyLabel="tm_stm32f4_rtc.c" index="13">
 <position info="not_deleted" x="14679" y="0"/>
 </item>
-<item historyLabel="usb_bsp.c" index="13">
+<item historyLabel="usb_bsp.c" index="11">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="0" y="903"/>
 </item>
-<item historyLabel="usbd_storage_msd.c" index="16">
+<item historyLabel="usbd_storage_msd.c" index="14">
 <position info="not_deleted" x="1437" y="0"/>
 </item>
-<item historyLabel="usbd_usr.c" index="17">
+<item historyLabel="usbd_usr.c" index="15">
 <position info="not_deleted" x="1123" y="0"/>
 </item>
-<item historyLabel="usbd_storage_msd.c" index="16">
+<item historyLabel="usbd_storage_msd.c" index="14">
 <position info="not_deleted" x="1437" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="1876" y="0"/>
 </item>
-<item historyLabel="fatfs_sd_sdio.c" index="18">
+<item historyLabel="fatfs_sd_sdio.c" index="16">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="2302" y="0"/>
 </item>
-<item historyLabel="usbd_storage_msd.c" index="16">
+<item historyLabel="usbd_storage_msd.c" index="14">
 <position info="not_deleted" x="1437" y="0"/>
 </item>
-<item historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="2302" y="0"/>
 </item>
-<item historyLabel="stm32f4xx_it.c" index="14">
+<item historyLabel="stm32f4xx_it.c" index="12">
 <position info="not_deleted" x="1118" y="0"/>
 </item>
-<item active="true" historyLabel="main.c" index="3">
+<item historyLabel="main.c" index="1">
 <position info="not_deleted" x="2302" y="0"/>
+</item>
+<item historyLabel="usbd_desc.c" index="17">
+<position info="not_deleted" x="8284" y="70"/>
+</item>
+<item historyLabel="usbd_desc.c" index="17">
+<position info="not_deleted" x="8386" y="0"/>
+</item>
+<item historyLabel="usbd_desc.c" index="17">
+<position info="not_deleted" x="6216" y="0"/>
+</item>
+<item historyLabel="usbd_req.c" index="18">
+<position info="not_deleted" x="20321" y="0"/>
+</item>
+<item historyLabel="usbd_desc.c" index="17">
+<position info="not_deleted" x="6216" y="0"/>
+</item>
+<item historyLabel="usbd_desc.c" index="17">
+<position info="not_deleted" x="7186" y="0"/>
+</item>
+<item historyLabel="usbd_req.c" index="18">
+<position info="not_deleted" x="20053" y="67"/>
+</item>
+<item historyLabel="usbd_desc.c" index="17">
+<position info="not_deleted" x="7239" y="0"/>
+</item>
+<item historyLabel="usbd_desc.c" index="17">
+<position info="not_deleted" x="7219" y="0"/>
+</item>
+<item historyLabel="usbd_desc.c" index="17">
+<position info="not_deleted" x="6222" y="22"/>
+</item>
+<item historyLabel="usbd_desc.c" index="17">
+<position info="not_deleted" x="1968" y="76"/>
+</item>
+<item active="true" historyLabel="main.c" index="1">
+<position info="not_deleted" x="3359" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -441,6 +456,15 @@
 <actionBarAdvisor/>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_desc.h" tooltip="TesteSDIO/USB/DRD/usbd_desc.h">
+<persistable path="/TesteSDIO/USB/DRD/usbd_desc.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_req.c" tooltip="TesteSDIO/USB/DEVICE_lib/usbd_req.c">
+<persistable path="/TesteSDIO/USB/DEVICE_lib/usbd_req.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="usbd_desc.c" tooltip="TesteSDIO/USB/DRD/usbd_desc.c">
+<persistable path="/TesteSDIO/USB/DRD/usbd_desc.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="fatfs_sd_sdio.c" tooltip="TesteSDIO/fatfs/drivers/fatfs_sd_sdio.c">
 <persistable path="/TesteSDIO/fatfs/drivers/fatfs_sd_sdio.c"/>
 </file>
@@ -476,15 +500,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_rtc.c" tooltip="TesteSDIO/tm_stm32f4_rtc.c">
 <persistable path="/TesteSDIO/tm_stm32f4_rtc.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="stm32f4xx_exti.h" tooltip="TesteSDIO/cmsis_lib/include/stm32f4xx_exti.h">
-<persistable path="/TesteSDIO/cmsis_lib/include/stm32f4xx_exti.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="startup_stm32f4xx.c" tooltip="TesteSDIO/cmsis_boot/startup/startup_stm32f4xx.c">
-<persistable path="/TesteSDIO/cmsis_boot/startup/startup_stm32f4xx.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="defines.h" tooltip="TesteSDIO/defines.h">
-<persistable path="/TesteSDIO/defines.h"/>
 </file>
 </mruList>
 </workbench>
